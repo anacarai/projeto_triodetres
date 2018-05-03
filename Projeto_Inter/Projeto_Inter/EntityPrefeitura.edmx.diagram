@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="89b9ea23e5c84b879738fcbaf63710e5" Name="Diagram1" >
+        <EntityTypeShape EntityType="bancodadosModel.cadastro_fornecedor" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="bancodadosModel.cadastro_funcionario" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="bancodadosModel.cadastro_produto" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="bancodadosModel.compra" Width="1.5" PointX="4.75" PointY="5.75" />
+        <EntityTypeShape EntityType="bancodadosModel.cotacao" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="bancodadosModel.requisicao" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="bancodadosModel.usuarios" Width="1.5" PointX="6.75" PointY="5.75" />
+        <AssociationConnector Association="bancodadosModel.FK__cotacao_requisicao" />
+        <AssociationConnector Association="bancodadosModel.FK_cotacao_requsicao" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

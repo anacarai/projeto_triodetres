@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bancodadosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cadastro_fornecedor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="razaosocial" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="cnpj" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="inscricaoest" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="telefone" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cep" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="logradouro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="complemento" Type="varchar" MaxLength="50" />
+    <Property Name="bairro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cidade" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="departamento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="datacadastro" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cadastro_funcionario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cpf" Type="int" Nullable="false" />
+    <Property Name="rg" Type="int" Nullable="false" />
+    <Property Name="telefone" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="cep" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="logradouro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="complemento" Type="varchar" MaxLength="50" />
+    <Property Name="bairro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cidade" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cargo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="departamento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="datacadastro" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cadastro_produto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="marcaitem" Type="varchar" MaxLength="20" />
+    <Property Name="unidademedida" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="quantidade" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="compra">
+    <Key>
+      <PropertyRef Name="idcompra" />
+    </Key>
+    <Property Name="idcompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idcotacao" Type="int" Nullable="false" />
+    <Property Name="datacotacao" Type="date" Nullable="false" />
+    <Property Name="funcionariosolicit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="departamento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="funcionarioaprov" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="prazo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="pagamento" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cotacao">
+    <Key>
+      <PropertyRef Name="idreq" />
+    </Key>
+    <Property Name="idcotacao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="datacotacao" Type="date" Nullable="false" />
+    <Property Name="idreq" Type="int" Nullable="false" />
+    <Property Name="datareq" Type="date" Nullable="false" />
+    <Property Name="funcioanriosolicit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="departamento" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="valor" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="funcionarioaprov" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="requisicao">
+    <Key>
+      <PropertyRef Name="idreq" />
+    </Key>
+    <Property Name="idreq" Type="int" Nullable="false" />
+    <Property Name="datareq" Type="date" Nullable="false" />
+    <Property Name="iditem" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="quantidade" Type="int" Nullable="false" />
+    <Property Name="comentario" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="funcionariorequisit" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idusuario" />
+    </Key>
+    <Property Name="idusuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="login" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="senha" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__cotacao_requisicao">
+    <End Role="cotacao" Type="Self.cotacao" Multiplicity="1" />
+    <End Role="cotacao1" Type="Self.cotacao" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="cotacao">
+        <PropertyRef Name="idreq" />
+      </Principal>
+      <Dependent Role="cotacao1">
+        <PropertyRef Name="idreq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cotacao_requsicao">
+    <End Role="requisicao" Type="Self.requisicao" Multiplicity="1" />
+    <End Role="cotacao" Type="Self.cotacao" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="requisicao">
+        <PropertyRef Name="idreq" />
+      </Principal>
+      <Dependent Role="cotacao">
+        <PropertyRef Name="idreq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bancodadosModelStoreContainer">
+    <EntitySet Name="cadastro_fornecedor" EntityType="Self.cadastro_fornecedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cadastro_funcionario" EntityType="Self.cadastro_funcionario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cadastro_produto" EntityType="Self.cadastro_produto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="compra" EntityType="Self.compra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cotacao" EntityType="Self.cotacao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="requisicao" EntityType="Self.requisicao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__cotacao_requisicao" Association="Self.FK__cotacao_requisicao">
+      <End Role="cotacao" EntitySet="cotacao" />
+      <End Role="cotacao1" EntitySet="cotacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cotacao_requsicao" Association="Self.FK_cotacao_requsicao">
+      <End Role="requisicao" EntitySet="requisicao" />
+      <End Role="cotacao" EntitySet="cotacao" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

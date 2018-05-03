@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bancodadosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="bancodadosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cadastro_fornecedor" EntityType="bancodadosModel.cadastro_fornecedor" />
+    <EntitySet Name="cadastro_funcionario" EntityType="bancodadosModel.cadastro_funcionario" />
+    <EntitySet Name="cadastro_produto" EntityType="bancodadosModel.cadastro_produto" />
+    <EntitySet Name="compra" EntityType="bancodadosModel.compra" />
+    <EntitySet Name="cotacao" EntityType="bancodadosModel.cotacao" />
+    <EntitySet Name="requisicao" EntityType="bancodadosModel.requisicao" />
+    <EntitySet Name="usuarios" EntityType="bancodadosModel.usuarios" />
+    <AssociationSet Name="FK__cotacao_requisicao" Association="bancodadosModel.FK__cotacao_requisicao">
+      <End Role="cotacao" EntitySet="cotacao" />
+      <End Role="cotacao1" EntitySet="cotacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cotacao_requsicao" Association="bancodadosModel.FK_cotacao_requsicao">
+      <End Role="requisicao" EntitySet="requisicao" />
+      <End Role="cotacao" EntitySet="cotacao" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="cadastro_fornecedor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="razaosocial" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="cnpj" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="inscricaoest" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="telefone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cep" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="logradouro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numero" Type="Int32" Nullable="false" />
+    <Property Name="complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bairro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cidade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="departamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datacadastro" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="cadastro_funcionario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cpf" Type="Int32" Nullable="false" />
+    <Property Name="rg" Type="Int32" Nullable="false" />
+    <Property Name="telefone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cep" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="logradouro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numero" Type="Int32" Nullable="false" />
+    <Property Name="complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bairro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cidade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cargo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="departamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datacadastro" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="cadastro_produto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descricao" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="marcaitem" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="unidademedida" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="quantidade" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="compra">
+    <Key>
+      <PropertyRef Name="idcompra" />
+    </Key>
+    <Property Name="idcompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idcotacao" Type="Int32" Nullable="false" />
+    <Property Name="datacotacao" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="funcionariosolicit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="departamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="funcionarioaprov" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="prazo" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="pagamento" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="cotacao">
+    <Key>
+      <PropertyRef Name="idreq" />
+    </Key>
+    <Property Name="idcotacao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datacotacao" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idreq" Type="Int32" Nullable="false" />
+    <Property Name="datareq" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="funcioanriosolicit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="departamento" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="valor" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="funcionarioaprov" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cotacao1" Relationship="bancodadosModel.FK__cotacao_requisicao" FromRole="cotacao" ToRole="cotacao1" />
+    <NavigationProperty Name="cotacao2" Relationship="bancodadosModel.FK__cotacao_requisicao" FromRole="cotacao1" ToRole="cotacao" />
+    <NavigationProperty Name="requisicao" Relationship="bancodadosModel.FK_cotacao_requsicao" FromRole="cotacao" ToRole="requisicao" />
+  </EntityType>
+  <EntityType Name="requisicao">
+    <Key>
+      <PropertyRef Name="idreq" />
+    </Key>
+    <Property Name="idreq" Type="Int32" Nullable="false" />
+    <Property Name="datareq" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="iditem" Type="Int32" Nullable="false" />
+    <Property Name="descricao" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="quantidade" Type="Int32" Nullable="false" />
+    <Property Name="comentario" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="funcionariorequisit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cotacao" Relationship="bancodadosModel.FK_cotacao_requsicao" FromRole="requisicao" ToRole="cotacao" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idusuario" />
+    </Key>
+    <Property Name="idusuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="senha" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__cotacao_requisicao">
+    <End Type="bancodadosModel.cotacao" Role="cotacao" Multiplicity="1" />
+    <End Type="bancodadosModel.cotacao" Role="cotacao1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="cotacao">
+        <PropertyRef Name="idreq" />
+      </Principal>
+      <Dependent Role="cotacao1">
+        <PropertyRef Name="idreq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cotacao_requsicao">
+    <End Type="bancodadosModel.requisicao" Role="requisicao" Multiplicity="1" />
+    <End Type="bancodadosModel.cotacao" Role="cotacao" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="requisicao">
+        <PropertyRef Name="idreq" />
+      </Principal>
+      <Dependent Role="cotacao">
+        <PropertyRef Name="idreq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

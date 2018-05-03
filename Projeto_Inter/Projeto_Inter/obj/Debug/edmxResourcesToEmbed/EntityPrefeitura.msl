@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bancodadosModelStoreContainer" CdmEntityContainer="bancodadosEntities">
+    <EntitySetMapping Name="cadastro_fornecedor">
+      <EntityTypeMapping TypeName="bancodadosModel.cadastro_fornecedor">
+        <MappingFragment StoreEntitySet="cadastro_fornecedor">
+          <ScalarProperty Name="datacadastro" ColumnName="datacadastro" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="complemento" ColumnName="complemento" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="logradouro" ColumnName="logradouro" />
+          <ScalarProperty Name="cep" ColumnName="cep" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="inscricaoest" ColumnName="inscricaoest" />
+          <ScalarProperty Name="cnpj" ColumnName="cnpj" />
+          <ScalarProperty Name="razaosocial" ColumnName="razaosocial" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cadastro_funcionario">
+      <EntityTypeMapping TypeName="bancodadosModel.cadastro_funcionario">
+        <MappingFragment StoreEntitySet="cadastro_funcionario">
+          <ScalarProperty Name="datacadastro" ColumnName="datacadastro" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="complemento" ColumnName="complemento" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="logradouro" ColumnName="logradouro" />
+          <ScalarProperty Name="cep" ColumnName="cep" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="rg" ColumnName="rg" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cadastro_produto">
+      <EntityTypeMapping TypeName="bancodadosModel.cadastro_produto">
+        <MappingFragment StoreEntitySet="cadastro_produto">
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="unidademedida" ColumnName="unidademedida" />
+          <ScalarProperty Name="marcaitem" ColumnName="marcaitem" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="compra">
+      <EntityTypeMapping TypeName="bancodadosModel.compra">
+        <MappingFragment StoreEntitySet="compra">
+          <ScalarProperty Name="pagamento" ColumnName="pagamento" />
+          <ScalarProperty Name="prazo" ColumnName="prazo" />
+          <ScalarProperty Name="funcionarioaprov" ColumnName="funcionarioaprov" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="funcionariosolicit" ColumnName="funcionariosolicit" />
+          <ScalarProperty Name="datacotacao" ColumnName="datacotacao" />
+          <ScalarProperty Name="idcotacao" ColumnName="idcotacao" />
+          <ScalarProperty Name="idcompra" ColumnName="idcompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cotacao">
+      <EntityTypeMapping TypeName="bancodadosModel.cotacao">
+        <MappingFragment StoreEntitySet="cotacao">
+          <ScalarProperty Name="funcionarioaprov" ColumnName="funcionarioaprov" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="funcioanriosolicit" ColumnName="funcioanriosolicit" />
+          <ScalarProperty Name="datareq" ColumnName="datareq" />
+          <ScalarProperty Name="idreq" ColumnName="idreq" />
+          <ScalarProperty Name="datacotacao" ColumnName="datacotacao" />
+          <ScalarProperty Name="idcotacao" ColumnName="idcotacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="requisicao">
+      <EntityTypeMapping TypeName="bancodadosModel.requisicao">
+        <MappingFragment StoreEntitySet="requisicao">
+          <ScalarProperty Name="funcionariorequisit" ColumnName="funcionariorequisit" />
+          <ScalarProperty Name="comentario" ColumnName="comentario" />
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="iditem" ColumnName="iditem" />
+          <ScalarProperty Name="datareq" ColumnName="datareq" />
+          <ScalarProperty Name="idreq" ColumnName="idreq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="bancodadosModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

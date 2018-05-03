@@ -1,0 +1,40 @@
+﻿* {
+    font-family: Calibri;
+    font-size: 16px;
+    background-image: url(imagens/Logo_Preto.png);
+}
+
+#login {
+    text-align: center;
+}
+
+#menu {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+
+fieldset {
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+    float: left;
+
+}
+
+legend{
+    float: left;
+}
+
+body {
+    background-image: url(imagens/Logo_Preto.png);
+}
+
+label{  
+    float: left;
+    text-align:left;
+    padding-right: 2px;
+}
+
+
