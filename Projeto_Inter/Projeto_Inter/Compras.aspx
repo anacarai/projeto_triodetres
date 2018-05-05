@@ -20,7 +20,7 @@
         <legend> Pagamento </legend>
 
     <asp:Label ID="Label10" runat="server" Text="Prazo"></asp:Label>
-    <asp:DropDownList ID="DropDownList1" runat="server">
+    <asp:DropDownList ID="prazo" runat="server">
         <asp:ListItem Value="1">A VISTA</asp:ListItem>
         <asp:ListItem Value="2">30 DIAS</asp:ListItem>
         <asp:ListItem Value="3">30/45 DIAS</asp:ListItem>
@@ -29,13 +29,19 @@
     <br />
     <br />
     <asp:CheckBox ID="cbDinheiro" runat="server" OnCheckedChanged="CheckBox1_CheckedChanged" Text="Dinheiro" />
+        <br />
+        <br />
     <asp:CheckBox ID="cbCheque" runat="server" Text="Cheque" />
+        <br />
+        <br />
     <asp:CheckBox ID="cbDeposito" runat="server" Text="Depósito" />
+        <br />
+        <br />
     <asp:CheckBox ID="cbBoleto" runat="server" Text="Boleto" />
     </fieldset>
 
     <br />
     <br />
 
-    <asp:Button ID="btnConfirmaCompra" runat="server" Text="Confirmar Compra" />
+    <asp:Button ID="btnConfirmaCompra" runat="server" Text="Confirmar Compra" OnClick="btnConfirmaCompra_Click" />
 </asp:Content>
