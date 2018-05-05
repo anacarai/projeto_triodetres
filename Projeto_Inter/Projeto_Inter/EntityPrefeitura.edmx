@@ -52,7 +52,8 @@
           <Property Name="descricao" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="marcaitem" Type="varchar" MaxLength="20" />
           <Property Name="unidademedida" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="quantidade" Type="float" Nullable="false" />
+          <Property Name="departamento" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="datacadastro" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="compra">
           <Key>
@@ -210,7 +211,8 @@
           <Property Name="descricao" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="marcaitem" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="unidademedida" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="quantidade" Type="Double" Nullable="false" />
+          <Property Name="departamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="datacadastro" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="compra">
           <Key>
@@ -337,7 +339,8 @@
           <EntitySetMapping Name="cadastro_produto">
             <EntityTypeMapping TypeName="bancodadosModel.cadastro_produto">
               <MappingFragment StoreEntitySet="cadastro_produto">
-                <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+                <ScalarProperty Name="datacadastro" ColumnName="datacadastro" />
+                <ScalarProperty Name="departamento" ColumnName="departamento" />
                 <ScalarProperty Name="unidademedida" ColumnName="unidademedida" />
                 <ScalarProperty Name="marcaitem" ColumnName="marcaitem" />
                 <ScalarProperty Name="descricao" ColumnName="descricao" />

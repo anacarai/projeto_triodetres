@@ -18,6 +18,7 @@ namespace Projeto_Inter
         public string descricao { get; set; }
         public string marcaitem { get; set; }
         public string unidademedida { get; set; }
-        public double quantidade { get; set; }
+        public string departamento { get; set; }
+        public System.DateTime datacadastro { get; set; }
     }
 }

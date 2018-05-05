@@ -9,9 +9,18 @@ namespace Projeto_Inter
 {
     public partial class PesquisaProduto : System.Web.UI.Page
     {
+        private bancodadosEntities entity = new bancodadosEntities();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            CarregarTabela();
+        }
 
+        public void CarregarTabela()
+        {
+            List<cadastro_produto> produtos = entity.cadastro_produto.ToList();
+            gridMateriais.DataSource = produtos;
+            gridMateriais.DataBind();
         }
     }
 }

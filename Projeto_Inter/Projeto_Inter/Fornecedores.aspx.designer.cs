@@ -40,13 +40,13 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// TextBox3 control.
+        /// txtNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
         /// Label5 control.
@@ -58,13 +58,13 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// txtCPF control.
+        /// txtCNPJ control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCPF;
+        protected global::System.Web.UI.WebControls.TextBox txtCNPJ;
         
         /// <summary>
         /// Label6 control.
@@ -76,13 +76,13 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// txtRG control.
+        /// txtIE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRG;
+        protected global::System.Web.UI.WebControls.TextBox txtIE;
         
         /// <summary>
         /// Label9 control.
@@ -101,15 +101,6 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCEP;
-        
-        /// <summary>
-        /// btnBuscar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
         /// Label10 control.
@@ -229,13 +220,13 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label17;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
         /// Label19 control.
@@ -281,6 +272,15 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSalvar;
+        
+        /// <summary>
+        /// btnNovo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNovo;
         
         /// <summary>
         /// btnAlterar control.

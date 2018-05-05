@@ -5,16 +5,16 @@
     <asp:Label ID="Label3" runat="server" Text="Código"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server" Width="80px"></asp:TextBox>
     <asp:Label ID="Label4" runat="server" Text="Nome"></asp:Label>
-    <asp:TextBox ID="TextBox3" runat="server" Width="533px"></asp:TextBox>
+    <asp:TextBox ID="txtNome" runat="server" Width="533px"></asp:TextBox>
     <br />
     <br />
     
     <fieldset>
       <legend>Dados da Empresa</legend> 
     <asp:Label ID="Label5" runat="server" Text="CNPJ"></asp:Label>
-    <asp:TextBox ID="txtCPF" runat="server" Width="303px"></asp:TextBox>
+    <asp:TextBox ID="txtCNPJ" runat="server" Width="303px"></asp:TextBox>
     <asp:Label ID="Label6" runat="server" Text="Inscrição Estadual"></asp:Label>
-    <asp:TextBox ID="txtRG" runat="server" Width="351px"></asp:TextBox>
+    <asp:TextBox ID="txtIE" runat="server" Width="351px"></asp:TextBox>
     </fieldset>
     <br />
     <br />
@@ -23,7 +23,6 @@
     <legend>Endereço</legend>
     <asp:Label ID="Label9" runat="server" Text="CEP"></asp:Label>
     <asp:TextBox ID="txtCEP" runat="server"></asp:TextBox>
-    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
     <br />
     <asp:Label ID="Label10" runat="server" Text="Logradouro"></asp:Label>
     <asp:TextBox ID="txtLogradouro" runat="server" Width="304px"></asp:TextBox>
@@ -45,7 +44,7 @@
     <asp:Label ID="Label16" runat="server" Text="Telefone"></asp:Label>
     <asp:TextBox ID="txtTelefone" runat="server" Width="183px"></asp:TextBox>
     <asp:Label ID="Label17" runat="server" Text="Email"></asp:Label>
-    <asp:TextBox ID="TextBox4" runat="server" Width="408px"></asp:TextBox>
+    <asp:TextBox ID="txtEmail" runat="server" Width="408px"></asp:TextBox>
     </fieldset>
     <br />
     <p>
@@ -59,6 +58,7 @@
     <br />
     <br />
     <asp:Button ID="btnSalvar" runat="server" Text="Salvar" />
+    <asp:Button ID="btnNovo" runat="server" Text="Novo" />
     <asp:Button ID="btnAlterar" runat="server" Text="Alterar" />
     <asp:Button ID="btnExcluir" runat="server" Text="Excluir" />
 </asp:Content>

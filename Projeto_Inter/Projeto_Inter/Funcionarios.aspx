@@ -4,9 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <asp:Label ID="Label3" runat="server" Text="Código"></asp:Label>
-    <asp:TextBox ID="TextBox2" runat="server" Width="80px"></asp:TextBox>
+    <asp:TextBox ID="txtID" runat="server" Width="80px"></asp:TextBox>
     <asp:Label ID="Label4" runat="server" Text="Nome"></asp:Label>
-    <asp:TextBox ID="TextBox3" runat="server" Width="533px"></asp:TextBox>
+    <asp:TextBox ID="txtNome" runat="server" Width="533px"></asp:TextBox>
     <br />
     <br />
     <fieldset>
@@ -23,7 +23,6 @@
         <legend>Endereço</legend>
     <asp:Label ID="Label9" runat="server" Text="CEP"></asp:Label>
     <asp:TextBox ID="txtCEP" runat="server"></asp:TextBox>
-    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
     <br />
     <asp:Label ID="Label10" runat="server" Text="Logradouro"></asp:Label>
     <asp:TextBox ID="txtLogradouro" runat="server" Width="304px"></asp:TextBox>
@@ -45,7 +44,7 @@
     <asp:Label ID="Label16" runat="server" Text="Telefone"></asp:Label>
     <asp:TextBox ID="txtTelefone" runat="server" Width="183px"></asp:TextBox>
     <asp:Label ID="Label17" runat="server" Text="Email"></asp:Label>
-    <asp:TextBox ID="TextBox4" runat="server" Width="408px"></asp:TextBox>
+    <asp:TextBox ID="txtEmail" runat="server" Width="408px"></asp:TextBox>
     </fieldset>
     <p>
         <br />
@@ -60,7 +59,8 @@
     <asp:TextBox ID="txtDataCadastro" runat="server" TextMode="Date"></asp:TextBox>
     <br />
     <br />
-    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" />
+    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+    <asp:Button ID="btnNovo" runat="server" OnClick="btnNovo_Click" Text="Novo" />
     <asp:Button ID="btnAlterar" runat="server" Text="Alterar" />
     <asp:Button ID="btnExcluir" runat="server" Text="Excluir" />
 

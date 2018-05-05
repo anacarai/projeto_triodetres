@@ -4,12 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Label ID="Label3" runat="server" Text="Lista de Materiais"></asp:Label>
     <hr />
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
-
-    <br />
     <asp:GridView ID="gridMateriais" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="187px" Width="764px">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
