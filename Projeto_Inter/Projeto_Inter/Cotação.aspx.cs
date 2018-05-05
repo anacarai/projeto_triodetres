@@ -34,6 +34,7 @@ namespace Projeto_Inter
 
             entity.cotacao.Add(cotacao);
 
+
             entity.SaveChanges();
 
             LimparCampos();
