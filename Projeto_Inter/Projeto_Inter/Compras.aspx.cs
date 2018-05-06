@@ -33,7 +33,6 @@ namespace Projeto_Inter
             compra.funcionariosolicit = txtFuncSolicit.Text;
             compra.departamento = txtDepartamento.Text;
             compra.funcionarioaprov = txtFuncAprov.Text;
-            compra.prazo = prazo.Text;
 
             entity.compra.Add(compra);
 

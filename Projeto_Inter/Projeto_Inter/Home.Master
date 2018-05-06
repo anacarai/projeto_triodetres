@@ -7,7 +7,8 @@
     <title>Home</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    
+
+    <link href="Styles/Style_Home.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -18,21 +19,16 @@
 &nbsp;-
         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
 
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Funcionários</button>
+            <button type="button" class="btn btn-secondary">Fornecedores</button>
+            <button type="button" class="btn btn-secondary">Cadastro de Produtos</button>
+            <button type="button" class="btn btn-secondary">Pesquisa de Produtos</button>
+            <button type="button" class="btn btn-secondary">Requisições</button>
+            <button type="button" class="btn btn-secondary">Cotações</button>
+            <button type="button" class="btn btn-secondary">Compras</button>
+        </div>
 
-        <asp:Button ID="btnFuncionario" runat="server" Height="45px" style="margin-top: 0px" Text="Funcionários" Width="99px" />
-        <asp:Button ID="btnFornecedor" runat="server" Height="45px" Text="Fornecedores" Width="105px" />
-        <asp:Button ID="btnCadProd" runat="server" Height="45px" Text="Cadastro de Produtos" Width="142px" />
-        <asp:Button ID="btnPesqProd" runat="server" Height="45px" Text="Pesquisa de Produtos" Width="143px" />
-        <asp:Button ID="btnRequisicao" runat="server" Height="45px" Text="Requisições" Width="90px" />
-        <asp:Button ID="btnCotacao" runat="server" Height="45px" Text="Cotações" />
-        <asp:Button ID="btnCompras" runat="server" Height="45px" Text="Compras" OnClick="btnCompras_Click" />
-
-
-        <asp:Label ID="Label2" runat="server" Text="Pesquisar" Height="20px"></asp:Label>
-        <asp:TextBox ID="txtPesquisar" runat="server" Width="663px"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Buscar" Width="72px" CssClass="btn btn-primary"/>
-
-    
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 

@@ -103,24 +103,6 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.TextBox txtFuncAprov;
         
         /// <summary>
-        /// Label10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
-        
-        /// <summary>
-        /// prazo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList prazo;
-        
-        /// <summary>
         /// cbDinheiro control.
         /// </summary>
         /// <remarks>
@@ -155,14 +137,5 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbBoleto;
-        
-        /// <summary>
-        /// btnConfirmaCompra control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirmaCompra;
     }
 }

@@ -1,20 +1,15 @@
 ﻿* {
     font-family: Calibri;
     font-size: 16px;
-    background-image: url(../imagens/Logo_Preto.png);
+}
+
+body{
+    background-image: url(../imagens/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
-
-#login {
-    text-align: center;
-}
-
-#menu {
-    text-align: center;
-    vertical-align: middle;
-    position: relative;
-}
 
 
 fieldset {
