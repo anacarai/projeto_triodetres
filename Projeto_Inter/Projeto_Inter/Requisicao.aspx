@@ -12,13 +12,13 @@
         <legend> Itens </legend>
     <asp:Label ID="Label6" runat="server" Text="Código"></asp:Label>
     <asp:TextBox ID="txtCodigo" runat="server"></asp:TextBox>
-    <asp:Button ID="Button2" runat="server" Text="Buscar" />
+    <asp:Button ID="Button2" runat="server" Text="Buscar" OnClick="Button2_Click" />
     <br />
     <asp:Label ID="Label7" runat="server" Text="Descrição"></asp:Label>
     <asp:TextBox ID="txtDescricao" runat="server"></asp:TextBox>
     <asp:Label ID="Label8" runat="server" Text="Quantidade"></asp:Label>
     <asp:TextBox ID="txtQuantidade" runat="server"></asp:TextBox>
-    <asp:Button ID="btnAdicionar" runat="server" Text="Adicionar" />
+    <asp:Button ID="btnAdicionar" runat="server" Text="Adicionar" OnClick="btnAdicionar_Click" />
         <br />
     <br />
     <asp:GridView ID="gridReq" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="606px">
@@ -48,7 +48,7 @@
     <asp:TextBox ID="txtJustificativa" runat="server" Height="131px" Width="596px" TextMode="MultiLine"></asp:TextBox>
         <br />
         <br />
-    <asp:Button ID="btnSalvarReq" runat="server" Text="Salvar Requisição" />
+    <asp:Button ID="btnSalvarReq" runat="server" Text="Salvar Requisição" OnClick="btnSalvarReq_Click" />
     <br />
     <br />
     <asp:Label ID="Label10" runat="server" Text="Status da Requisição"></asp:Label>
