@@ -1,8 +1,10 @@
 ﻿* {
     font-family: Calibri;
     font-size: 16px;
-    background-image: url(imagens/Logo_Preto.png);
+    background-image: url(../imagens/Logo_Preto.png);
 }
+
+
 
 #login {
     text-align: center;
@@ -27,14 +29,10 @@ legend{
     float: left;
 }
 
-body {
-    background-image: url(imagens/Logo_Preto.png);
-}
+
 
 label{  
     float: left;
     text-align:left;
     padding-right: 2px;
 }
-
-

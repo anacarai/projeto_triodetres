@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Label ID="Label3" runat="server" Text="Nº Cotação"></asp:Label>
-    <asp:TextBox ID="txtNumero" runat="server" ReadOnly="True"></asp:TextBox>
+    <asp:TextBox ID="txtNumero" runat="server" ReadOnly="True" CssClass="form-control" placeholder="Entre com o número da cotação:"></asp:TextBox>
     <asp:Label ID="Label4" runat="server" Text="Data da Cotação"></asp:Label>
     <asp:TextBox ID="txtDataCot" runat="server" ReadOnly="True"></asp:TextBox>
     <br />
@@ -12,7 +12,7 @@
     <asp:Label ID="Label7" runat="server" Text="Departamento"></asp:Label>
     <asp:TextBox ID="txtDepartamento" runat="server" ReadOnly="True"></asp:TextBox>
     <asp:Label ID="Label8" runat="server" Text="Funcionário Aprovador"></asp:Label>
-    <asp:TextBox ID="txtFuncAprov" runat="server" OnTextChanged="txtFuncAprov_TextChanged" ReadOnly="True"></asp:TextBox>
+    <asp:TextBox ID="txtFuncAprov" runat="server" ReadOnly="True"></asp:TextBox>
     <br />
     <br />
     <br />
@@ -28,7 +28,7 @@
     </asp:DropDownList>
     <br />
     <br />
-    <asp:CheckBox ID="cbDinheiro" runat="server" OnCheckedChanged="CheckBox1_CheckedChanged" Text="Dinheiro" />
+    <asp:CheckBox ID="cbDinheiro" runat="server" Text="Dinheiro" />
     <asp:CheckBox ID="cbCheque" runat="server" Text="Cheque" />
     <asp:CheckBox ID="cbDeposito" runat="server" Text="Depósito" />
     <asp:CheckBox ID="cbBoleto" runat="server" Text="Boleto" />

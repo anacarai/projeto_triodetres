@@ -49,15 +49,6 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
         
         /// <summary>
-        /// mensagem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm mensagem;
-        
-        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>

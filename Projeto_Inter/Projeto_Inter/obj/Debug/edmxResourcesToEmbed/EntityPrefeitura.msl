@@ -45,7 +45,8 @@
     <EntitySetMapping Name="cadastro_produto">
       <EntityTypeMapping TypeName="bancodadosModel.cadastro_produto">
         <MappingFragment StoreEntitySet="cadastro_produto">
-          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="datacadastro" ColumnName="datacadastro" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
           <ScalarProperty Name="unidademedida" ColumnName="unidademedida" />
           <ScalarProperty Name="marcaitem" ColumnName="marcaitem" />
           <ScalarProperty Name="descricao" ColumnName="descricao" />

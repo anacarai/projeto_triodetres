@@ -15,9 +15,6 @@
 &nbsp;-
         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
     </div>
-    </form>
-
-    <form id="mensagem" runat="server">
 
         <asp:Label ID="Label2" runat="server" Text="Bem vindo ao Software da Prefeitura Municipal de Palmares Paulista"></asp:Label>
         <br />

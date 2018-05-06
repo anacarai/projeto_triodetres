@@ -47,7 +47,8 @@
     <Property Name="descricao" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="marcaitem" Type="varchar" MaxLength="20" />
     <Property Name="unidademedida" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="quantidade" Type="float" Nullable="false" />
+    <Property Name="departamento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="datacadastro" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="compra">
     <Key>

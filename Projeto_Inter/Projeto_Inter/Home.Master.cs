@@ -30,5 +30,10 @@ namespace Projeto_Inter
             Session["usuariologado"] = null;
             Response.Redirect("Login.aspx");
         }
+
+        protected void btnCompras_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Compras.aspx");
+        }
     }
 }

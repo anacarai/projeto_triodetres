@@ -64,7 +64,8 @@
     <Property Name="descricao" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="marcaitem" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="unidademedida" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="quantidade" Type="Double" Nullable="false" />
+    <Property Name="departamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datacadastro" Type="DateTime" Nullable="false" Precision="0" />
   </EntityType>
   <EntityType Name="compra">
     <Key>
