@@ -25,7 +25,7 @@ namespace Projeto_Inter
             {
                 Session["usuariologado"] = u;
 
-                Login1.DestinationPageUrl = "BoasVindas.aspx";
+                Login1.DestinationPageUrl = "PagInicial.aspx";
                 e.Authenticated = true;
             }
 
