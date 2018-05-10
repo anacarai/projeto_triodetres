@@ -2,36 +2,40 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
-  <div class="row">
-    <div class="col">
-    <asp:Label ID="Label3" runat="server" Text="Nº Requisição"></asp:Label>
-    <asp:TextBox ID="txtNumero" runat="server"  CssClass="form-control"></asp:TextBox>
-    <div class="col">
-    <asp:Label ID="Label4" runat="server" Text="Data da Requisição"></asp:Label>
-    <asp:TextBox ID="txtDataReq" runat="server"  CssClass="form-control"></asp:TextBox>
-      </div></div></div>
+
+    <div class="container-fluid">
+    <div class="form-group col-md-3">
+
+            <asp:Label ID="Label3" runat="server" Text="Nº Requisição"></asp:Label>
+            <asp:TextBox ID="txtNumero" runat="server"  CssClass="form-control"></asp:TextBox>
+            <asp:Label ID="Label4" runat="server" Text="Data da Requisição"></asp:Label>
+            <asp:TextBox ID="txtDataReq" runat="server"  CssClass="form-control"></asp:TextBox>
+
+     </div>
 
     <br />
 
-        <div class="row">
-    <div class="col">
+    <div class="form-group col-md-3">
     <fieldset>
         <legend> Itens </legend>
+        <div class="row">
+        <div class="col-12 col-md-8">
     <asp:Label ID="Label6" runat="server" Text="Código"></asp:Label>
-    <asp:TextBox ID="txtCodigo" runat="server"  CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtCodigo" runat="server"  CssClass="form-control"></asp:TextBox>    
     <asp:Button ID="Button2" runat="server" Text="Buscar" OnClick="Button2_Click" CssClass="btn btn-secondary" />
-        </div>
-    <div class="col">
+</div></div>
+        <br />
+              
     <asp:Label ID="Label7" runat="server" Text="Descrição"></asp:Label>
     <asp:TextBox ID="txtDescricao" runat="server"  CssClass="form-control"></asp:TextBox>
-        </div>
-    <div class="col">
+
     <asp:Label ID="Label8" runat="server" Text="Quantidade"></asp:Label>
     <asp:TextBox ID="txtQuantidade" runat="server"  CssClass="form-control"></asp:TextBox>
     <asp:Button ID="btnAdicionar" runat="server" Text="Adicionar" OnClick="btnAdicionar_Click" CssClass="btn btn-secondary" />
-        </div></div></div>
-        
+    
+    </fieldset>
+    </div>              
+ 
         <br />
     <br />
     <asp:GridView ID="gridReq" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" GridLines="Vertical" Width="606px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px">
@@ -50,7 +54,7 @@
         <SortedDescendingCellStyle BackColor="#EAEAD3" />
         <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
-        </fieldset>
+
     <br />
 
     <br />
@@ -65,4 +69,5 @@
     <br />
     <asp:Label ID="Label10" runat="server" Text="Status da Requisição"></asp:Label>
     <asp:TextBox ID="txtStatus" runat="server" ReadOnly="True" Height="16px"  CssClass="form-control"></asp:TextBox>
+           </div>    
 </asp:Content>

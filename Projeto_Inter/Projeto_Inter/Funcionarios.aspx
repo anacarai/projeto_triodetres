@@ -3,21 +3,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <div class="container-fluid">
+
     <asp:Label ID="Label3" runat="server" Text="Código"></asp:Label>
     <asp:TextBox ID="txtID" runat="server" Width="80px" CssClass="form-control"></asp:TextBox>
     <asp:Label ID="Label4" runat="server" Text="Nome"></asp:Label>
     <asp:TextBox ID="txtNome" runat="server" Width="533px" CssClass="form-control"></asp:TextBox>
     <br />
-    <br />
-    
+
+
     <fieldset>
         <legend> Dados Pessoais </legend>
     <asp:Label ID="Label5" runat="server" Text="CPF"></asp:Label>
     <asp:TextBox ID="txtCPF" runat="server" Width="303px" CssClass="form-control"></asp:TextBox>
     <asp:Label ID="Label6" runat="server" Text="RG"></asp:Label>
     <asp:TextBox ID="txtRG" runat="server" Width="303px" CssClass="form-control"></asp:TextBox>
-    </fieldset>
-    <br />
+    </fieldset><br />
     <br />
     
     <fieldset>
@@ -63,5 +64,5 @@
     <asp:Button ID="btnNovo" runat="server" Text="Novo" CssClass="btn btn-secondary" />
     <asp:Button ID="btnAlterar" runat="server" Text="Alterar" CssClass="btn btn-secondary" />
     <asp:Button ID="btnExcluir" runat="server" Text="Excluir" CssClass="btn btn-secondary" />
-
+</div>>
 </asp:Content>

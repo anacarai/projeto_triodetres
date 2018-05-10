@@ -31,6 +31,36 @@ namespace Projeto_Inter
             Response.Redirect("Login.aspx");
         }
 
+        protected void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Funcionarios.aspx");
+        }
+
+        protected void btnFornecedores_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Fornecedores.aspx");
+        }
+
+        protected void btnCadProd_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CadastroProduto.aspx");
+        }
+
+        protected void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PesquisaProduto.aspx");
+        }
+
+        protected void btnReq_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Requisicao.aspx");
+        }
+
+        protected void btnCotacao_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cotação.aspx");
+        }
+
         protected void btnCompras_Click(object sender, EventArgs e)
         {
             Response.Redirect("Compras.aspx");

@@ -1,6 +1,7 @@
 ﻿* {
     font-family: Calibri;
-    font-size: 16px;
+    font-style: unset ;
+    font-size: 20px;
 }
 
 body{
@@ -9,22 +10,3 @@ body{
     background-size: cover;
 }
 
-fieldset {
-    text-align: left;
-    vertical-align: middle;
-    position: relative;
-    float: left;
-
-}
-
-legend{
-    float: left;
-}
-
-
-
-label{  
-    float: left;
-    text-align:left;
-    padding-right: 2px;
-}

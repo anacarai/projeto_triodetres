@@ -2,6 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+    <asp:Label ID="Label4" runat="server" Text="Pesquisar"></asp:Label>
+    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" ></asp:TextBox>
+    <asp:Button ID="btnBuscar" runat="server" Text="Buscar"  CssClass="btn btn-secondary" />
+    <br />
+    <br />
     <asp:Label ID="Label3" runat="server" Text="Lista de Materiais"></asp:Label>
     <hr />
     <asp:GridView ID="gridMateriais" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="187px" Width="764px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px">
