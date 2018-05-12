@@ -71,4 +71,3 @@ C:\Users\tazki\Documents\FATEC\4º Semestre\INTER\projeto no git\projeto_triodet
 C:\Users\tazki\Documents\FATEC\4º Semestre\INTER\projeto no git\projeto_triodetres\Projeto_Inter\Projeto_Inter\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\tazki\Documents\FATEC\4º Semestre\INTER\projeto no git\projeto_triodetres\Projeto_Inter\Projeto_Inter\obj\Debug\Projeto_Inter.dll
 C:\Users\tazki\Documents\FATEC\4º Semestre\INTER\projeto no git\projeto_triodetres\Projeto_Inter\Projeto_Inter\obj\Debug\Projeto_Inter.pdb
-C:\Users\tazki\Documents\FATEC\4º Semestre\INTER\projeto no git\projeto_triodetres\Projeto_Inter\Projeto_Inter\obj\Debug\Projeto_Inter.csprojResolveAssemblyReference.cache

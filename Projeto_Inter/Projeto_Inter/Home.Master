@@ -34,6 +34,8 @@
             <asp:Button ID="btnReq" runat="server" Text="Requisições" CssClass="btn btn-secondary" OnClick="btnReq_Click" />
             <asp:Button ID="btnCotacao" runat="server" Text="Cotações" CssClass="btn btn-secondary" OnClick="btnCotacao_Click" />
             <asp:Button ID="btnCompras" runat="server" Text="Compras" CssClass="btn btn-secondary" OnClick="btnCompras_Click" />
+            <br />
+            <br />
         </div>
 
     <div>
