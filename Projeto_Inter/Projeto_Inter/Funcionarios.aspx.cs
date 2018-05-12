@@ -38,8 +38,7 @@ namespace Projeto_Inter
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == string.Empty)
-            {
+            
                 funcionario.nome = txtNome.Text;
                 funcionario.cpf = Convert.ToInt32(txtCPF.Text.ToString());
                 funcionario.rg = Convert.ToInt32(txtRG.Text.ToString());
@@ -60,7 +59,7 @@ namespace Projeto_Inter
                 entity.SaveChanges();
 
                 LimparCampos();
-            }
+            
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)

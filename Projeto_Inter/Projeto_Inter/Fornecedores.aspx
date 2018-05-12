@@ -4,18 +4,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container-fluid">
-    <div class="row">
-    <div class="col-1">
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="validacao" />
         <br />
-        <br />
+    <div class="row">
+    <div class="col-1">
+        
     <asp:Label ID="Label3" runat="server" Text="Código"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server" Width="80px" CssClass="form-control" ReadOnly="True"></asp:TextBox>
     </div>
 
     <div class="col-10">
-        <br />
-        <br />
     <asp:Label ID="Label4" runat="server" Text="Nome"></asp:Label>
         <asp:RequiredFieldValidator ID="ValidatorNome" runat="server" ControlToValidate="txtNome" ErrorMessage="Campo &quot;Nome&quot; não informado!" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
     <asp:TextBox ID="txtNome" runat="server" Width="500px" CssClass="form-control"></asp:TextBox>
