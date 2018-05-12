@@ -7,11 +7,16 @@
 
     <div class="row">
     <div class="col-1">
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="validacao" />
+        <br />
+        <br />
     <asp:Label ID="Label3" runat="server" Text="Código"></asp:Label>
     <asp:TextBox ID="txtID" runat="server" Width="80px" CssClass="form-control"></asp:TextBox>
         </div>
 
     <div class="col-10">
+        <br />
+        <br />
     <asp:Label ID="Label4" runat="server" Text="Nome"></asp:Label>
         <asp:RequiredFieldValidator ID="ValidatorNome" runat="server" ControlToValidate="txtNome" ErrorMessage="Campo &quot;Nome&quot; não informado" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
     <asp:TextBox ID="txtNome" runat="server" Width="500px" CssClass="form-control"></asp:TextBox>
@@ -89,7 +94,6 @@
 
     <div class="col-2">
     <asp:Label ID="Label17" runat="server" Text="Email"></asp:Label>
-        <asp:RequiredFieldValidator ID="ValidatorEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Campo &quot;Email&quot; não informado" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
     <asp:TextBox ID="txtEmail" runat="server" Width="400px" CssClass="form-control" placeholder="email@email.com.br"></asp:TextBox>
         </div></div>
     </fieldset>
@@ -101,7 +105,7 @@
     <div class="col-3">
     <asp:Label ID="Label18" runat="server" Text="Cargo"></asp:Label>
         <asp:RequiredFieldValidator ID="Validator" runat="server" ControlToValidate="txtCargo" ErrorMessage="Campo &quot;Cargo&quot; não informado" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
-    <asp:TextBox ID="txtCargo" runat="server" Width="200px" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtCargo" runat="server" Width="200px" CssClass="form-control" ValidationGroup="validacao"></asp:TextBox>
     </div>
 
     <div class="col-3">
@@ -118,7 +122,7 @@
     <br />
     <br />
 
-    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-secondary" />
+    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-secondary" OnClick="btnSalvar_Click1" ValidationGroup="validacao" />
     <asp:Button ID="btnNovo" runat="server" Text="Novo" CssClass="btn btn-secondary" />
     <asp:Button ID="btnAlterar" runat="server" Text="Alterar" CssClass="btn btn-secondary" />
     <asp:Button ID="btnExcluir" runat="server" Text="Excluir" CssClass="btn btn-secondary" />

@@ -38,29 +38,39 @@ namespace Projeto_Inter
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            funcionario.nome = txtNome.Text;
-            funcionario.cpf = Convert.ToInt32(txtCPF.Text.ToString());
-            funcionario.rg = Convert.ToInt32(txtRG.Text.ToString());
-            funcionario.cep = txtCEP.Text;
-            funcionario.telefone = txtTelefone.Text;
-            funcionario.email = txtEmail.Text;
-            funcionario.logradouro = txtLogradouro.Text;
-            funcionario.numero = Convert.ToInt32(txtNumero.Text.ToString());
-            funcionario.complemento = txtComplemento.Text;
-            funcionario.bairro = txtBairro.Text;
-            funcionario.cidade = txtCidade.Text;
-            funcionario.cargo = txtCargo.Text;
-            funcionario.departamento = txtDepartamento.Text;
-            funcionario.datacadastro = Convert.ToDateTime(txtDataCadastro.Text.ToString());
+            if (txtID.Text == string.Empty)
+            {
+                funcionario.nome = txtNome.Text;
+                funcionario.cpf = Convert.ToInt32(txtCPF.Text.ToString());
+                funcionario.rg = Convert.ToInt32(txtRG.Text.ToString());
+                funcionario.cep = txtCEP.Text;
+                funcionario.telefone = txtTelefone.Text;
+                funcionario.email = txtEmail.Text;
+                funcionario.logradouro = txtLogradouro.Text;
+                funcionario.numero = Convert.ToInt32(txtNumero.Text.ToString());
+                funcionario.complemento = txtComplemento.Text;
+                funcionario.bairro = txtBairro.Text;
+                funcionario.cidade = txtCidade.Text;
+                funcionario.cargo = txtCargo.Text;
+                funcionario.departamento = txtDepartamento.Text;
+                funcionario.datacadastro = Convert.ToDateTime(txtDataCadastro.Text.ToString());
 
-            entity.cadastro_funcionario.Add(funcionario);
+                entity.cadastro_funcionario.Add(funcionario);
 
-            entity.SaveChanges();
+                entity.SaveChanges();
+
+                LimparCampos();
+            }
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)
         {
             LimparCampos();
+        }
+
+        protected void btnSalvar_Click1(object sender, EventArgs e)
+        {
+
         }
     }
 }
