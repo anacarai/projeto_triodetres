@@ -13,6 +13,15 @@ namespace Projeto_Inter {
     public partial class CadastroProduto {
         
         /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        
+        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
+        /// ValidatorNome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorNome;
+        
+        /// <summary>
         /// txtDescricao control.
         /// </summary>
         /// <remarks>
@@ -56,6 +74,15 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
+        /// ValidatorMarca control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorMarca;
         
         /// <summary>
         /// txtMarca control.
@@ -76,6 +103,15 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
+        /// ValidatorUnidadeMedida control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorUnidadeMedida;
+        
+        /// <summary>
         /// txtUnMedida control.
         /// </summary>
         /// <remarks>
@@ -94,6 +130,15 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label19;
         
         /// <summary>
+        /// ValidatorDepartamento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorDepartamento;
+        
+        /// <summary>
         /// txtDepartamento control.
         /// </summary>
         /// <remarks>
@@ -110,6 +155,15 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label20;
+        
+        /// <summary>
+        /// ValidatorDataCadastro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorDataCadastro;
         
         /// <summary>
         /// txtDataCadastro control.
