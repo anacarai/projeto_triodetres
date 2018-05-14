@@ -56,11 +56,56 @@ namespace Projeto_Inter
             entity.cadastro_funcionario.Add(funcionario);
 
             entity.SaveChanges();
+            CarregarTabela();
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)
         {
             LimparCampos();
+        }
+
+        public void CarregarTabela()
+        {
+            List<cadastro_funcionario> funcionario = entity.cadastro_funcionario.ToList();
+            GridView1.DataSource = funcionario;
+            GridView1.DataBind();
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            //Linha selecionada
+            int index = Convert.ToInt32(e.CommandArgument);
+
+            //ID da linha selecionada
+            int idSelecionado = Convert.ToInt32(GridView1.Rows[index].Cells[0].Text.ToString());
+            if(e.CommandName.ToString().Equals("Remover"))
+            {
+                //Remover
+                cadastro_funcionario funcionario = entity.cadastro_funcionario.Find(Convert.ToInt32(idSelecionado));
+                entity.cadastro_funcionario.Remove(funcionario);
+                entity.SaveChanges();
+                CarregarTabela();                
+            }
+
+            else if(e.CommandArgument.ToString().Equals("Alterar"))
+            {
+                cadastro_funcionario funcionario = entity.cadastro_funcionario.Find(Convert.ToInt32(idSelecionado));
+                txtID.Text = funcionario.id.ToString();
+                txtNome.Text = funcionario.nome;
+                txtCPF.Text = funcionario.cpf.ToString();
+                txtRG.Text = funcionario.rg.ToString();
+                txtTelefone.Text = funcionario.telefone;
+                txtEmail.Text = funcionario.email;
+                txtCEP.Text = funcionario.cep;
+                txtLogradouro.Text = funcionario.logradouro;
+                txtNumero.Text = funcionario.numero.ToString();
+                txtComplemento.Text = funcionario.complemento;
+                txtBairro.Text = funcionario.bairro;
+                txtCidade.Text = funcionario.cidade;
+                txtCargo.Text = funcionario.cargo;
+                txtDepartamento.Text = funcionario.departamento;
+                txtDataCadastro.Text = funcionario.datacadastro.ToString();
+            }
         }
     }
 }

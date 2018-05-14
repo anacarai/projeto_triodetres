@@ -7,7 +7,7 @@
     <div class="row">
     <div class="col-1">
     <asp:Label ID="Label3" runat="server" Text="Código"></asp:Label>
-    <asp:TextBox ID="TextBox2" runat="server" Width="80px" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtID" runat="server" Width="80px" CssClass="form-control"></asp:TextBox>
     </div>
 
     <div class="col-10">
@@ -103,8 +103,38 @@
     <br />
     <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-secondary" />
     <asp:Button ID="btnNovo" runat="server" Text="Novo" CssClass="btn btn-secondary" />
-    <asp:Button ID="btnAlterar" runat="server" Text="Alterar" CssClass="btn btn-secondary" />
-    <asp:Button ID="btnExcluir" runat="server" Text="Excluir" CssClass="btn btn-secondary" />
+        <br />
+        <br />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnRowCommand="GridView1_RowCommand">
+        <AlternatingRowStyle BackColor="White" />
+        <Columns>
+            <asp:BoundField ApplyFormatInEditMode="True" DataField="id" HeaderText="Código" />
+            <asp:BoundField DataField="razaosocial" HeaderText="Razão Social" />
+            <asp:BoundField DataField="cnpj" HeaderText="CNPJ" />
+            <asp:BoundField DataField="inscricaoest" HeaderText="IE" />
+            <asp:BoundField DataField="telefone" HeaderText="Telefone" />
+            <asp:BoundField DataField="email" HeaderText="Email" />
+            <asp:BoundField DataField="cep" HeaderText="CEP" />
+            <asp:BoundField DataField="logradouro" HeaderText="Logradouro" />
+            <asp:BoundField DataField="numero" HeaderText="Número" />
+            <asp:BoundField DataField="complemento" HeaderText="Complemento" />
+            <asp:BoundField DataField="bairro" HeaderText="Bairro" />
+            <asp:BoundField DataField="cidade" HeaderText="Cidade" />
+            <asp:BoundField DataField="departamento" HeaderText="Departamento" />
+            <asp:BoundField DataField="datacadastro" HeaderText="Data de Cadastro" />
+            <asp:ButtonField HeaderText="Alterar" Text="Alterar" />
+            <asp:ButtonField HeaderText="Remover" Text="Remover" />
+        </Columns>
+        <FooterStyle BackColor="#CCCC99" />
+        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+        <RowStyle BackColor="#F7F7DE" />
+        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+        <SortedAscendingHeaderStyle BackColor="#848384" />
+        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+        <SortedDescendingHeaderStyle BackColor="#575357" />
+    </asp:GridView>
 
     </div>
 
