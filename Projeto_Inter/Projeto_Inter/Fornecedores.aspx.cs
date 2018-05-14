@@ -103,4 +103,5 @@ namespace Projeto_Inter
                 txtDataCadastro.Text = fornecedor.datacadastro.ToString();
             }
         }
+    }
 }

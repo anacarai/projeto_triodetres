@@ -108,3 +108,4 @@ C:\Users\Renan Freitas\Desktop\Programação para internet\projeto_triodetres\Pr
 C:\Users\Renan Freitas\Desktop\Programação para internet\projeto_triodetres\Projeto_Inter\Projeto_Inter\obj\Debug\Projeto_Inter.csprojResolveAssemblyReference.cache
 C:\Users\Renan Freitas\Desktop\Programação para internet\projeto_triodetres\Projeto_Inter\Projeto_Inter\obj\Debug\Projeto_Inter.dll
 C:\Users\Renan Freitas\Desktop\Programação para internet\projeto_triodetres\Projeto_Inter\Projeto_Inter\obj\Debug\Projeto_Inter.pdb
+C:\Users\tazki\Documents\FATEC\4º Semestre\INTER\projeto no git\projeto_triodetres\Projeto_Inter\Projeto_Inter\obj\Debug\Projeto_Inter.csprojResolveAssemblyReference.cache

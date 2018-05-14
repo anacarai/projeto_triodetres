@@ -13,15 +13,6 @@ namespace Projeto_Inter {
     public partial class Fornecedores {
         
         /// <summary>
-        /// ValidationSummary1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
-        
-        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// ValidatorNome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorNome;
-        
-        /// <summary>
         /// txtNome control.
         /// </summary>
         /// <remarks>
@@ -74,15 +56,6 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
-        
-        /// <summary>
-        /// ValidatorCNPJ control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorCNPJ;
         
         /// <summary>
         /// txtCNPJ control.
@@ -103,15 +76,6 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// ValidatorInscricao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorInscricao;
-        
-        /// <summary>
         /// txtIE control.
         /// </summary>
         /// <remarks>
@@ -128,15 +92,6 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label9;
-        
-        /// <summary>
-        /// ValidatorCEP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorCEP;
         
         /// <summary>
         /// txtCEP control.
@@ -175,15 +130,6 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// ValidatorLagradouro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorLagradouro;
-        
-        /// <summary>
         /// txtLogradouro control.
         /// </summary>
         /// <remarks>
@@ -200,15 +146,6 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label11;
-        
-        /// <summary>
-        /// ValidatorNumero control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorNumero;
         
         /// <summary>
         /// txtNumero control.
@@ -247,15 +184,6 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label13;
         
         /// <summary>
-        /// ValidatorBairro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorBairro;
-        
-        /// <summary>
         /// txtBairro control.
         /// </summary>
         /// <remarks>
@@ -272,15 +200,6 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label14;
-        
-        /// <summary>
-        /// ValidatorCidade control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorCidade;
         
         /// <summary>
         /// txtCidade control.
@@ -301,15 +220,6 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label16;
         
         /// <summary>
-        /// ValidatorTelefone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorTelefone;
-        
-        /// <summary>
         /// txtTelefone control.
         /// </summary>
         /// <remarks>
@@ -326,15 +236,6 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label17;
-        
-        /// <summary>
-        /// ValidatorEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorEmail;
         
         /// <summary>
         /// txtEmail control.
@@ -355,15 +256,6 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.Label Label19;
         
         /// <summary>
-        /// ValidatorDepartamento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorDepartamento;
-        
-        /// <summary>
         /// txtDepartamento control.
         /// </summary>
         /// <remarks>
@@ -380,15 +272,6 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label20;
-        
-        /// <summary>
-        /// ValidatorDataCadastro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorDataCadastro;
         
         /// <summary>
         /// txtDataCadastro control.

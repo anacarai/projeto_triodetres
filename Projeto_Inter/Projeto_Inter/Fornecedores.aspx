@@ -85,8 +85,6 @@
         </div></div>
     </fieldset>
     <br />
-    <p>
-    </p>
 
     <br />
     <div class="row">
