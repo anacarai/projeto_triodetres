@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="validacao" />
-    <asp:Label ID="Label3" runat="server" Text="Nº Cotação"></asp:Label>
+    <asp:Label ID="NumCotacao" runat="server" Text="Nº Cotação"></asp:Label>
     <asp:RequiredFieldValidator ID="ValidatorCotacao" runat="server" ControlToValidate="txtNumero" ErrorMessage="O campo &quot;Nº cotação&quot; não foi informado " ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
     <asp:TextBox ID="txtNumero" runat="server" CssClass="form-control" placeholder="Entre com o número da cotação:" Width="176px"></asp:TextBox>
     <asp:Label ID="Label4" runat="server" Text="Data da Cotação"></asp:Label>
