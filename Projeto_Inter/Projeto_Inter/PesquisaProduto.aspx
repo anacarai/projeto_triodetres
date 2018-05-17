@@ -10,7 +10,7 @@
     <br />
     <asp:Label ID="Label3" runat="server" Text="Lista de Materiais"></asp:Label>
     <hr />
-    <asp:GridView ID="gridMateriais" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="187px" Width="764px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px">
+    <asp:GridView ID="gridMateriais" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="187px" Width="100%" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" AllowPaging="True" OnPageIndexChanging="gridMateriais_PageIndexChanging">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField ApplyFormatInEditMode="True" DataField="id" HeaderText="Código" ReadOnly="True" />
