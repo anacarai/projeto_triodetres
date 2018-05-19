@@ -44,5 +44,41 @@ namespace Projeto_Inter
         {
             LimparCampos();
         }
+
+        public void CarregarTabela()
+        {
+            List<cadastro_produto> produto = entity.cadastro_produto.ToList();
+            GridView1.DataSource = produto;
+            GridView1.DataBind();
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            {
+                //Linha selecionada
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                //ID da linha selecionada
+                int idSelecionado = Convert.ToInt32(GridView1.Rows[index].Cells[0].Text.ToString());
+                if (e.CommandName.ToString().Equals("Remover"))
+                {
+                    //Remover
+                    cadastro_produto produto = entity.cadastro_produto.Find(Convert.ToInt32(idSelecionado));
+                    entity.cadastro_produto.Remove(produto);
+                    entity.SaveChanges();
+                    CarregarTabela();
+                }
+
+                else if (e.CommandArgument.ToString().Equals("Alterar"))
+                {
+                    cadastro_produto produto = entity.cadastro_produto.Find(Convert.ToInt32(idSelecionado));
+                    txtDescricao.Text = produto.descricao;
+                    txtID.Text = produto.id.ToString();
+                    txtMarca.Text = produto.marcaitem;
+                    txtUnMedida.Text = produto.unidademedida;
+                    txtDataCadastro.Text = produto.datacadastro.ToString();
+                }
+            }
+        }
     }
 }

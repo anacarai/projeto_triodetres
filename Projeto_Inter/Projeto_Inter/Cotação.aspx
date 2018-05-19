@@ -2,15 +2,27 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
     <asp:Label ID="Label3" runat="server" Text="Nº Requisição"></asp:Label>
     <asp:TextBox ID="txtNumero" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
+             </div>
+    <div class="col-2">
     <asp:Label ID="Label4" runat="server" Text="Data da Requisição"></asp:Label>
     <asp:TextBox ID="txtDataReq" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
-    <br />
+        </div></div>
+        <br />
+                
+        <div class="row">
+            <div class="col-4">
     <asp:Label ID="Label6" runat="server" Text="Funcionário Solicitante"></asp:Label>
-    <asp:TextBox ID="txtFuncSolicit" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtFuncSolicit" runat="server" ReadOnly="True" Width="400px" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="col-4">
     <asp:Label ID="Label7" runat="server" Text="Departamento"></asp:Label>
     <asp:TextBox ID="txtDepartamento" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
+                </div></div>
     <br />
     <br />
     <fieldset>
@@ -54,9 +66,10 @@
         <SortedDescendingCellStyle BackColor="#EAEAD3" />
         <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
-        |</fieldset>
+        </fieldset>
     <br />
     <br />
     <asp:Button ID="btnEnviarCotacao" runat="server" OnClick="Button2_Click" Text="Enviar Cotação" CssClass="btn btn-secondary" />
     <asp:Button ID="btnAprovar" runat="server" Text="Aprovar" CssClass="btn btn-secondary" />
+</div>
 </asp:Content>

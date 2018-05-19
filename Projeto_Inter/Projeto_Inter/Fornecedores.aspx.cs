@@ -60,5 +60,48 @@ namespace Projeto_Inter
         {
             LimparCampos();
         }
+
+        public void CarregarTabela()
+        {
+            List<cadastro_funcionario> funcionario = entity.cadastro_funcionario.ToList();
+            GridView1.DataSource = funcionario;
+            GridView1.DataBind();
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            //Linha selecionada
+            int index = Convert.ToInt32(e.CommandArgument);
+
+            //ID da linha selecionada
+            int idSelecionado = Convert.ToInt32(GridView1.Rows[index].Cells[0].Text.ToString());
+            if (e.CommandName.ToString().Equals("Remover"))
+            {
+                //Remover
+                cadastro_fornecedor fornecedor = entity.cadastro_fornecedor.Find(Convert.ToInt32(idSelecionado));
+                entity.cadastro_fornecedor.Remove(fornecedor);
+                entity.SaveChanges();
+                CarregarTabela();
+            }
+
+            else if (e.CommandArgument.ToString().Equals("Alterar"))
+            {
+                cadastro_fornecedor fornecedor = entity.cadastro_fornecedor.Find(Convert.ToInt32(idSelecionado));
+                txtID.Text = fornecedor.id.ToString();
+                txtNome.Text = fornecedor.razaosocial;
+                txtCNPJ.Text = fornecedor.cnpj.ToString();
+                txtIE.Text = fornecedor.inscricaoest.ToString();
+                txtTelefone.Text = fornecedor.telefone;
+                txtEmail.Text = fornecedor.email;
+                txtCEP.Text = fornecedor.cep;
+                txtLogradouro.Text = fornecedor.logradouro;
+                txtNumero.Text = fornecedor.numero.ToString();
+                txtComplemento.Text = fornecedor.complemento;
+                txtBairro.Text = fornecedor.bairro;
+                txtCidade.Text = fornecedor.cidade;
+                txtDepartamento.Text = fornecedor.departamento;
+                txtDataCadastro.Text = fornecedor.datacadastro.ToString();
+            }
+        }
     }
 }
