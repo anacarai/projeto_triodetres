@@ -12,6 +12,7 @@
         <div class="col-6">
             <asp:Label ID="Label4" runat="server" Text="Data da Requisição"></asp:Label>
             <asp:TextBox ID="txtDataReq" runat="server"  CssClass="form-control"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="ValidatorDataRequisicao" runat="server" ControlToValidate="txtDataReq" ErrorMessage="O campo &quot;data&quot; nao foi informado" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
             </div>
      </div>
 
@@ -22,23 +23,24 @@
         <div class="row">
         <div class="col-2">
     <asp:Label ID="Label6" runat="server" Text="Código"></asp:Label>
-    <asp:TextBox ID="txtCodigo" runat="server"  CssClass="form-control"></asp:TextBox>    
+    <asp:TextBox ID="txtCodigo" runat="server"  CssClass="form-control" OnTextChanged="txtCodigo_TextChanged"></asp:TextBox>    
             <br />
-    <asp:Button ID="Button2" runat="server" Text="Buscar" OnClick="Button2_Click" CssClass="btn btn-secondary" />
+    <asp:Button ID="Button2" runat="server" Text="Buscar" OnClick="Button2_Click" CssClass="btn btn-secondary" ValidationGroup="validacao" />
 </div> </div>
         <br />
               
     <div class="row">
     <div class="col-2">
     <asp:Label ID="Label7" runat="server" Text="Descrição"></asp:Label>
-    <asp:TextBox ID="txtDescricao" runat="server"  CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtDescricao" runat="server"  CssClass="form-control" ReadOnly="True" Width="400px"></asp:TextBox>
     </div>
         <div class="col-2">
     <asp:Label ID="Label8" runat="server" Text="Quantidade"></asp:Label>
     <asp:TextBox ID="txtQuantidade" runat="server"  CssClass="form-control"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="ValidatorQuantidade" runat="server" ControlToValidate="txtQuantidade" ErrorMessage="O campo &quot;Quantidade&quot; não fi informado" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
     </div></div>
         <br />
-    <asp:Button ID="btnAdicionar" runat="server" Text="Adicionar" OnClick="btnAdicionar_Click" CssClass="btn btn-secondary" />
+    <asp:Button ID="btnAdicionar" runat="server" Text="Adicionar" OnClick="btnAdicionar_Click" CssClass="btn btn-secondary" ValidationGroup="validacao" />
 
     </fieldset>             
  

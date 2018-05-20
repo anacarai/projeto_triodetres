@@ -57,6 +57,7 @@ namespace Projeto_Inter
 
             entity.SaveChanges();
             CarregarTabela();
+            LimparCampos();
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)
