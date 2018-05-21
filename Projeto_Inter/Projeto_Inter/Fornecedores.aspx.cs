@@ -105,5 +105,12 @@ namespace Projeto_Inter
                 txtDataCadastro.Text = fornecedor.datacadastro.ToString();
             }
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.DataSource = fornecedor;
+            GridView1.PageIndex = e.NewPageIndex;
+            GridView1.DataBind();
+        }
     }
 }

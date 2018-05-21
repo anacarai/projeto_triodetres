@@ -119,29 +119,29 @@
     <br />
     <br />
 
-    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-secondary" OnClick="btnSalvar_Click1" ValidationGroup="validacao" />
+    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-secondary" OnClick="btnSalvar_Click" ValidationGroup="validacao" />
     <asp:Button ID="btnNovo" runat="server" Text="Novo" CssClass="btn btn-secondary" />
         <br />
         <br />
 </div>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnRowCommand="GridView1_RowCommand">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnRowCommand="GridView1_RowCommand" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" Width="100%">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField ApplyFormatInEditMode="True" DataField="id" HeaderText="Código" />
-            <asp:BoundField DataField="nome" HeaderText="Nome" />
-            <asp:BoundField DataField="cpf" HeaderText="CPF" />
-            <asp:BoundField DataField="rg" HeaderText="RG" />
-            <asp:BoundField DataField="telefone" HeaderText="Telefone" />
-            <asp:BoundField DataField="email" HeaderText="Email" />
-            <asp:BoundField DataField="cep" HeaderText="CEP" />
-            <asp:BoundField DataField="logradouro" HeaderText="Logradouro" />
-            <asp:BoundField DataField="numero" HeaderText="Número" />
-            <asp:BoundField DataField="complemento" HeaderText="Complemento" />
-            <asp:BoundField DataField="bairro" HeaderText="Bairro" />
-            <asp:BoundField DataField="cidade" HeaderText="Cidade" />
-            <asp:BoundField DataField="cargo" HeaderText="Cargo" />
-            <asp:BoundField DataField="departamento" HeaderText="Departamento" />
-            <asp:BoundField DataField="datacadastro" HeaderText="Data de Cadastro" />
+            <asp:BoundField DataField="nome" HeaderText="Nome" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="cpf" HeaderText="CPF" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="rg" HeaderText="RG" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="telefone" HeaderText="Telefone" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="email" HeaderText="Email" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="cep" HeaderText="CEP" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="logradouro" HeaderText="Logradouro" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="numero" HeaderText="Número" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="complemento" HeaderText="Complemento" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="bairro" HeaderText="Bairro" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="cidade" HeaderText="Cidade" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="cargo" HeaderText="Cargo" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="departamento" HeaderText="Departamento" ApplyFormatInEditMode="True" />
+            <asp:BoundField DataField="datacadastro" HeaderText="Data de Cadastro" ApplyFormatInEditMode="True" />
             <asp:ButtonField HeaderText="Alterar" Text="Alterar" />
             <asp:ButtonField HeaderText="Remover" Text="Remover" />
         </Columns>

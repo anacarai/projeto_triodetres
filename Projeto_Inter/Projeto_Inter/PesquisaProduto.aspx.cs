@@ -22,5 +22,12 @@ namespace Projeto_Inter
             gridMateriais.DataSource = produtos;
             gridMateriais.DataBind();
         }
+
+        protected void gridMateriais_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            //gridMateriais.DataSource = produtos;
+            gridMateriais.PageIndex = e.NewPageIndex;
+            gridMateriais.DataBind();
+        }
     }
 }

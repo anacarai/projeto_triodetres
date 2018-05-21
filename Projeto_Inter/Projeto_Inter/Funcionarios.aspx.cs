@@ -15,7 +15,7 @@ namespace Projeto_Inter
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CarregarTabela();
         }
 
         public void LimparCampos()
@@ -39,8 +39,8 @@ namespace Projeto_Inter
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
             funcionario.nome = txtNome.Text;
-            funcionario.cpf = Convert.ToInt32(txtCPF.Text.ToString());
-            funcionario.rg = Convert.ToInt32(txtRG.Text.ToString());
+            funcionario.cpf = txtCPF.Text;
+            funcionario.rg = txtRG.Text;
             funcionario.cep = txtCEP.Text;
             funcionario.telefone = txtTelefone.Text;
             funcionario.email = txtEmail.Text;
@@ -93,8 +93,8 @@ namespace Projeto_Inter
                 cadastro_funcionario funcionario = entity.cadastro_funcionario.Find(Convert.ToInt32(idSelecionado));
                 txtID.Text = funcionario.id.ToString();
                 txtNome.Text = funcionario.nome;
-                txtCPF.Text = funcionario.cpf.ToString();
-                txtRG.Text = funcionario.rg.ToString();
+                txtCPF.Text = funcionario.cpf;
+                txtRG.Text = funcionario.rg;
                 txtTelefone.Text = funcionario.telefone;
                 txtEmail.Text = funcionario.email;
                 txtCEP.Text = funcionario.cep;
@@ -107,6 +107,13 @@ namespace Projeto_Inter
                 txtDepartamento.Text = funcionario.departamento;
                 txtDataCadastro.Text = funcionario.datacadastro.ToString();
             }
+        }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.DataSource = funcionario;
+            GridView1.PageIndex = e.NewPageIndex;
+            GridView1.DataBind();
         }
     }
 }

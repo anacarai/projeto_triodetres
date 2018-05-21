@@ -7,7 +7,7 @@
     <div class="row">
     <div class="col-1">
     <asp:Label ID="Label3" runat="server" Text="Código"></asp:Label>
-    <asp:TextBox ID="txtID" runat="server" Width="80px" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtID" runat="server" Width="80px" CssClass="form-control" ReadOnly="True"></asp:TextBox>
     </div>
 
     <div class="col-10">
@@ -103,7 +103,7 @@
     <asp:Button ID="btnNovo" runat="server" Text="Novo" CssClass="btn btn-secondary" />
         <br />
         <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnRowCommand="GridView1_RowCommand">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnRowCommand="GridView1_RowCommand" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" Width="100%">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField ApplyFormatInEditMode="True" DataField="id" HeaderText="Código" />
