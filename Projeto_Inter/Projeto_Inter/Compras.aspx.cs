@@ -38,5 +38,10 @@ namespace Projeto_Inter
 
             entity.SaveChanges();
         }
+
+        protected void txtFuncSolicit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

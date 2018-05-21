@@ -54,6 +54,8 @@ namespace Projeto_Inter
             entity.cadastro_fornecedor.Add(fornecedor);
 
             entity.SaveChanges();
+
+            LimparCampos();
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)

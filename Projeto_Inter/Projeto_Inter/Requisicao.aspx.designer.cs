@@ -49,6 +49,15 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.TextBox txtDataReq;
         
         /// <summary>
+        /// ValidatorDataRequisicao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorDataRequisicao;
+        
+        /// <summary>
         /// Label6 control.
         /// </summary>
         /// <remarks>
@@ -110,6 +119,15 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtQuantidade;
+        
+        /// <summary>
+        /// ValidatorQuantidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorQuantidade;
         
         /// <summary>
         /// btnAdicionar control.

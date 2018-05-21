@@ -48,5 +48,10 @@ namespace Projeto_Inter
 
             entity.SaveChanges();
         }
+
+        protected void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

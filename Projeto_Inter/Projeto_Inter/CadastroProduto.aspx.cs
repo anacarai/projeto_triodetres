@@ -37,7 +37,9 @@ namespace Projeto_Inter
 
             entity.cadastro_produto.Add(produto);
 
-            entity.SaveChanges();    
+            entity.SaveChanges();
+
+            LimparCampos();
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)
