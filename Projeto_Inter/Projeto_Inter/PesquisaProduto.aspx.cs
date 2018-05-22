@@ -29,5 +29,10 @@ namespace Projeto_Inter
             gridMateriais.PageIndex = e.NewPageIndex;
             gridMateriais.DataBind();
         }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
