@@ -90,7 +90,15 @@
     <div class="row">
     <div class="col-3">
     <asp:Label ID="Label19" runat="server" Text="Departamento"></asp:Label>
-    <asp:TextBox ID="txtDepartamento" runat="server" Width="254px" CssClass="form-control"></asp:TextBox>
+        <br />
+        <asp:DropDownList ID="ddlDepartamento" runat="server">
+            <asp:ListItem>Saúde</asp:ListItem>
+            <asp:ListItem>Educação</asp:ListItem>
+            <asp:ListItem>Segurança</asp:ListItem>
+            <asp:ListItem>Meio Ambiente</asp:ListItem>
+            <asp:ListItem>Alimentação</asp:ListItem>
+            <asp:ListItem>Geral</asp:ListItem>
+        </asp:DropDownList>
         </div>
 
     <div class="col-3">
@@ -112,14 +120,7 @@
             <asp:BoundField DataField="inscricaoest" HeaderText="IE" />
             <asp:BoundField DataField="telefone" HeaderText="Telefone" />
             <asp:BoundField DataField="email" HeaderText="Email" />
-            <asp:BoundField DataField="cep" HeaderText="CEP" />
-            <asp:BoundField DataField="logradouro" HeaderText="Logradouro" />
-            <asp:BoundField DataField="numero" HeaderText="Número" />
-            <asp:BoundField DataField="complemento" HeaderText="Complemento" />
-            <asp:BoundField DataField="bairro" HeaderText="Bairro" />
             <asp:BoundField DataField="cidade" HeaderText="Cidade" />
-            <asp:BoundField DataField="departamento" HeaderText="Departamento" />
-            <asp:BoundField DataField="datacadastro" HeaderText="Data de Cadastro" />
             <asp:ButtonField HeaderText="Alterar" Text="Alterar" />
             <asp:ButtonField HeaderText="Remover" Text="Remover" />
         </Columns>

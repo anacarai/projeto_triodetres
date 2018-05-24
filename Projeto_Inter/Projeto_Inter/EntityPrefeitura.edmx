@@ -67,10 +67,11 @@
           <Property Name="funcionarioaprov" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="prazo" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="pagamento" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="idrequisicao" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="cotacao">
           <Key>
-            <PropertyRef Name="idreq" />
+            <PropertyRef Name="idcotacao" />
           </Key>
           <Property Name="idcotacao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="datacotacao" Type="date" Nullable="false" />
@@ -80,6 +81,7 @@
           <Property Name="departamento" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="valor" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="funcionarioaprov" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idfuncionario" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="requisicao">
           <Key>
@@ -92,6 +94,7 @@
           <Property Name="quantidade" Type="int" Nullable="false" />
           <Property Name="comentario" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="funcionariorequisit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idfuncionario" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="usuarios">
           <Key>
@@ -102,27 +105,75 @@
           <Property Name="login" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="senha" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK__cotacao_requisicao">
+        <Association Name="FK_compra_cotacao">
           <End Role="cotacao" Type="Self.cotacao" Multiplicity="1" />
-          <End Role="cotacao1" Type="Self.cotacao" Multiplicity="0..1" />
+          <End Role="compra" Type="Self.compra" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cotacao">
+              <PropertyRef Name="idcotacao" />
+            </Principal>
+            <Dependent Role="compra">
+              <PropertyRef Name="idcotacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_compra_requisicao">
+          <End Role="requisicao" Type="Self.requisicao" Multiplicity="1" />
+          <End Role="compra" Type="Self.compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="requisicao">
               <PropertyRef Name="idreq" />
             </Principal>
-            <Dependent Role="cotacao1">
-              <PropertyRef Name="idreq" />
+            <Dependent Role="compra">
+              <PropertyRef Name="idrequisicao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cotacao_cadastro_funcionario">
+          <End Role="cadastro_funcionario" Type="Self.cadastro_funcionario" Multiplicity="1" />
+          <End Role="cotacao" Type="Self.cotacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cadastro_funcionario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cotacao">
+              <PropertyRef Name="idfuncionario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_cotacao_requsicao">
           <End Role="requisicao" Type="Self.requisicao" Multiplicity="1" />
-          <End Role="cotacao" Type="Self.cotacao" Multiplicity="0..1" />
+          <End Role="cotacao" Type="Self.cotacao" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="requisicao">
               <PropertyRef Name="idreq" />
             </Principal>
             <Dependent Role="cotacao">
               <PropertyRef Name="idreq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_crequisicao_cadastro_funcionario">
+          <End Role="cadastro_funcionario" Type="Self.cadastro_funcionario" Multiplicity="1" />
+          <End Role="requisicao" Type="Self.requisicao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cadastro_funcionario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="requisicao">
+              <PropertyRef Name="idfuncionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_requisicao_cadastro_produto">
+          <End Role="cadastro_produto" Type="Self.cadastro_produto" Multiplicity="1" />
+          <End Role="requisicao" Type="Self.requisicao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cadastro_produto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="requisicao">
+              <PropertyRef Name="iditem" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -134,13 +185,29 @@
           <EntitySet Name="cotacao" EntityType="Self.cotacao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="requisicao" EntityType="Self.requisicao" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__cotacao_requisicao" Association="Self.FK__cotacao_requisicao">
+          <AssociationSet Name="FK_compra_cotacao" Association="Self.FK_compra_cotacao">
             <End Role="cotacao" EntitySet="cotacao" />
-            <End Role="cotacao1" EntitySet="cotacao" />
+            <End Role="compra" EntitySet="compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_compra_requisicao" Association="Self.FK_compra_requisicao">
+            <End Role="requisicao" EntitySet="requisicao" />
+            <End Role="compra" EntitySet="compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cotacao_cadastro_funcionario" Association="Self.FK_cotacao_cadastro_funcionario">
+            <End Role="cadastro_funcionario" EntitySet="cadastro_funcionario" />
+            <End Role="cotacao" EntitySet="cotacao" />
           </AssociationSet>
           <AssociationSet Name="FK_cotacao_requsicao" Association="Self.FK_cotacao_requsicao">
             <End Role="requisicao" EntitySet="requisicao" />
             <End Role="cotacao" EntitySet="cotacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_crequisicao_cadastro_funcionario" Association="Self.FK_crequisicao_cadastro_funcionario">
+            <End Role="cadastro_funcionario" EntitySet="cadastro_funcionario" />
+            <End Role="requisicao" EntitySet="requisicao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_requisicao_cadastro_produto" Association="Self.FK_requisicao_cadastro_produto">
+            <End Role="cadastro_produto" EntitySet="cadastro_produto" />
+            <End Role="requisicao" EntitySet="requisicao" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -162,6 +229,26 @@
           <AssociationSet Name="FK_cotacao_requsicao" Association="bancodadosModel.FK_cotacao_requsicao">
             <End Role="requisicao" EntitySet="requisicao" />
             <End Role="cotacao" EntitySet="cotacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cotacao_cadastro_funcionario" Association="bancodadosModel.FK_cotacao_cadastro_funcionario">
+            <End Role="cadastro_funcionario" EntitySet="cadastro_funcionario" />
+            <End Role="cotacao" EntitySet="cotacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_crequisicao_cadastro_funcionario" Association="bancodadosModel.FK_crequisicao_cadastro_funcionario">
+            <End Role="cadastro_funcionario" EntitySet="cadastro_funcionario" />
+            <End Role="requisicao" EntitySet="requisicao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_requisicao_cadastro_produto" Association="bancodadosModel.FK_requisicao_cadastro_produto">
+            <End Role="cadastro_produto" EntitySet="cadastro_produto" />
+            <End Role="requisicao" EntitySet="requisicao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_compra_cotacao" Association="bancodadosModel.FK_compra_cotacao">
+            <End Role="cotacao" EntitySet="cotacao" />
+            <End Role="compra" EntitySet="compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_compra_requisicao" Association="bancodadosModel.FK_compra_requisicao">
+            <End Role="requisicao" EntitySet="requisicao" />
+            <End Role="compra" EntitySet="compra" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="cadastro_fornecedor">
@@ -202,6 +289,8 @@
           <Property Name="cargo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="departamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="datacadastro" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="cotacao" Relationship="bancodadosModel.FK_cotacao_cadastro_funcionario" FromRole="cadastro_funcionario" ToRole="cotacao" />
+          <NavigationProperty Name="requisicao" Relationship="bancodadosModel.FK_crequisicao_cadastro_funcionario" FromRole="cadastro_funcionario" ToRole="requisicao" />
         </EntityType>
         <EntityType Name="cadastro_produto">
           <Key>
@@ -213,6 +302,7 @@
           <Property Name="unidademedida" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="departamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="datacadastro" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="requisicao" Relationship="bancodadosModel.FK_requisicao_cadastro_produto" FromRole="cadastro_produto" ToRole="requisicao" />
         </EntityType>
         <EntityType Name="compra">
           <Key>
@@ -226,6 +316,9 @@
           <Property Name="funcionarioaprov" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="prazo" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="pagamento" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="idrequisicao" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cotacao" Relationship="bancodadosModel.FK_compra_cotacao" FromRole="compra" ToRole="cotacao" />
+          <NavigationProperty Name="requisicao" Relationship="bancodadosModel.FK_compra_requisicao" FromRole="compra" ToRole="requisicao" />
         </EntityType>
         <EntityType Name="cotacao">
           <Key>
@@ -242,6 +335,9 @@
           <NavigationProperty Name="cotacao1" Relationship="bancodadosModel.FK__cotacao_requisicao" FromRole="cotacao" ToRole="cotacao1" />
           <NavigationProperty Name="cotacao2" Relationship="bancodadosModel.FK__cotacao_requisicao" FromRole="cotacao1" ToRole="cotacao" />
           <NavigationProperty Name="requisicao" Relationship="bancodadosModel.FK_cotacao_requsicao" FromRole="cotacao" ToRole="requisicao" />
+          <Property Name="idfuncionario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cadastro_funcionario" Relationship="bancodadosModel.FK_cotacao_cadastro_funcionario" FromRole="cotacao" ToRole="cadastro_funcionario" />
+          <NavigationProperty Name="compra" Relationship="bancodadosModel.FK_compra_cotacao" FromRole="cotacao" ToRole="compra" />
         </EntityType>
         <EntityType Name="requisicao">
           <Key>
@@ -255,6 +351,10 @@
           <Property Name="comentario" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="funcionariorequisit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="cotacao" Relationship="bancodadosModel.FK_cotacao_requsicao" FromRole="requisicao" ToRole="cotacao" />
+          <Property Name="idfuncionario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cadastro_funcionario" Relationship="bancodadosModel.FK_crequisicao_cadastro_funcionario" FromRole="requisicao" ToRole="cadastro_funcionario" />
+          <NavigationProperty Name="cadastro_produto" Relationship="bancodadosModel.FK_requisicao_cadastro_produto" FromRole="requisicao" ToRole="cadastro_produto" />
+          <NavigationProperty Name="compra" Relationship="bancodadosModel.FK_compra_requisicao" FromRole="requisicao" ToRole="compra" />
         </EntityType>
         <EntityType Name="usuarios">
           <Key>
@@ -286,6 +386,66 @@
             </Principal>
             <Dependent Role="cotacao">
               <PropertyRef Name="idreq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cotacao_cadastro_funcionario">
+          <End Type="bancodadosModel.cadastro_funcionario" Role="cadastro_funcionario" Multiplicity="1" />
+          <End Type="bancodadosModel.cotacao" Role="cotacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cadastro_funcionario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cotacao">
+              <PropertyRef Name="idfuncionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_crequisicao_cadastro_funcionario">
+          <End Type="bancodadosModel.cadastro_funcionario" Role="cadastro_funcionario" Multiplicity="1" />
+          <End Type="bancodadosModel.requisicao" Role="requisicao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cadastro_funcionario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="requisicao">
+              <PropertyRef Name="idfuncionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_requisicao_cadastro_produto">
+          <End Type="bancodadosModel.cadastro_produto" Role="cadastro_produto" Multiplicity="1" />
+          <End Type="bancodadosModel.requisicao" Role="requisicao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cadastro_produto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="requisicao">
+              <PropertyRef Name="iditem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_compra_cotacao">
+          <End Type="bancodadosModel.cotacao" Role="cotacao" Multiplicity="1" />
+          <End Type="bancodadosModel.compra" Role="compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cotacao">
+              <PropertyRef Name="idcotacao" />
+            </Principal>
+            <Dependent Role="compra">
+              <PropertyRef Name="idcotacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_compra_requisicao">
+          <End Type="bancodadosModel.requisicao" Role="requisicao" Multiplicity="1" />
+          <End Type="bancodadosModel.compra" Role="compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="requisicao">
+              <PropertyRef Name="idreq" />
+            </Principal>
+            <Dependent Role="compra">
+              <PropertyRef Name="idrequisicao" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -351,6 +511,7 @@
           <EntitySetMapping Name="compra">
             <EntityTypeMapping TypeName="bancodadosModel.compra">
               <MappingFragment StoreEntitySet="compra">
+                <ScalarProperty Name="idrequisicao" ColumnName="idrequisicao" />
                 <ScalarProperty Name="pagamento" ColumnName="pagamento" />
                 <ScalarProperty Name="prazo" ColumnName="prazo" />
                 <ScalarProperty Name="funcionarioaprov" ColumnName="funcionarioaprov" />
@@ -365,6 +526,7 @@
           <EntitySetMapping Name="cotacao">
             <EntityTypeMapping TypeName="bancodadosModel.cotacao">
               <MappingFragment StoreEntitySet="cotacao">
+                <ScalarProperty Name="idfuncionario" ColumnName="idfuncionario" />
                 <ScalarProperty Name="funcionarioaprov" ColumnName="funcionarioaprov" />
                 <ScalarProperty Name="valor" ColumnName="valor" />
                 <ScalarProperty Name="departamento" ColumnName="departamento" />
@@ -379,6 +541,7 @@
           <EntitySetMapping Name="requisicao">
             <EntityTypeMapping TypeName="bancodadosModel.requisicao">
               <MappingFragment StoreEntitySet="requisicao">
+                <ScalarProperty Name="idfuncionario" ColumnName="idfuncionario" />
                 <ScalarProperty Name="funcionariorequisit" ColumnName="funcionariorequisit" />
                 <ScalarProperty Name="comentario" ColumnName="comentario" />
                 <ScalarProperty Name="quantidade" ColumnName="quantidade" />

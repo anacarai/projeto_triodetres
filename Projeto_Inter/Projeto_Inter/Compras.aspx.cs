@@ -43,5 +43,12 @@ namespace Projeto_Inter
         {
 
         }
+
+        protected void btnSalvar_Click(object sender, EventArgs e)
+        {
+            var lista = entity.cotacao.Where(x => x.idcotacao.ToString().StartsWith(txtNumero.Text)).OrderBy(x => x.idcotacao).ToList();
+            gridCotacoes.DataSource = lista;
+            gridCotacoes.DataBind();
+        }
     }
 }

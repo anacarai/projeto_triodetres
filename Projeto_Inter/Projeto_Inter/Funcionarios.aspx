@@ -109,7 +109,15 @@
     <div class="col-3">
     <asp:Label ID="Label19" runat="server" Text="Departamento"></asp:Label>
         <asp:RequiredFieldValidator ID="ValidatorDepartamento" runat="server" ControlToValidate="txtDepartamento" ErrorMessage="Campo &quot;Departamento&quot; não informado" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
-    <asp:TextBox ID="txtDepartamento" runat="server" Width="250px" CssClass="form-control"></asp:TextBox>
+        <br />
+        <asp:DropDownList ID="ddlDepartamento" runat="server">
+            <asp:ListItem>Saúde</asp:ListItem>
+            <asp:ListItem>Educação</asp:ListItem>
+            <asp:ListItem>Segurança</asp:ListItem>
+            <asp:ListItem>Meio Ambiente</asp:ListItem>
+            <asp:ListItem>Alimentação</asp:ListItem>
+            <asp:ListItem>Geral</asp:ListItem>
+        </asp:DropDownList>
     </div>
 
     <div class="col-3">
@@ -134,15 +142,9 @@
             <asp:BoundField DataField="rg" HeaderText="RG" ApplyFormatInEditMode="True" />
             <asp:BoundField DataField="telefone" HeaderText="Telefone" ApplyFormatInEditMode="True" />
             <asp:BoundField DataField="email" HeaderText="Email" ApplyFormatInEditMode="True" />
-            <asp:BoundField DataField="cep" HeaderText="CEP" ApplyFormatInEditMode="True" />
-            <asp:BoundField DataField="logradouro" HeaderText="Logradouro" ApplyFormatInEditMode="True" />
-            <asp:BoundField DataField="numero" HeaderText="Número" ApplyFormatInEditMode="True" />
-            <asp:BoundField DataField="complemento" HeaderText="Complemento" ApplyFormatInEditMode="True" />
-            <asp:BoundField DataField="bairro" HeaderText="Bairro" ApplyFormatInEditMode="True" />
             <asp:BoundField DataField="cidade" HeaderText="Cidade" ApplyFormatInEditMode="True" />
             <asp:BoundField DataField="cargo" HeaderText="Cargo" ApplyFormatInEditMode="True" />
             <asp:BoundField DataField="departamento" HeaderText="Departamento" ApplyFormatInEditMode="True" />
-            <asp:BoundField DataField="datacadastro" HeaderText="Data de Cadastro" ApplyFormatInEditMode="True" />
             <asp:ButtonField HeaderText="Alterar" Text="Alterar" />
             <asp:ButtonField HeaderText="Remover" Text="Remover" />
         </Columns>

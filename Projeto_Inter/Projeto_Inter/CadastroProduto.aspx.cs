@@ -22,7 +22,7 @@ namespace Projeto_Inter
         {
             txtDescricao.Text = string.Empty;
             txtMarca.Text = string.Empty;
-            txtUnMedida.Text = string.Empty;
+            //txtUnMedida.Text = string.Empty;
             txtDescricao.Text = string.Empty;
             txtDataCadastro.Text = string.Empty;
         }
@@ -31,8 +31,7 @@ namespace Projeto_Inter
         {
             produto.descricao = txtDescricao.Text;
             produto.marcaitem = txtMarca.Text;
-            produto.unidademedida = txtUnMedida.Text;
-            produto.departamento = txtDepartamento.Text;
+            //produto.unidademedida = txtUnMedida.Text;
             produto.datacadastro = Convert.ToDateTime(txtDataCadastro.Text);
 
 
@@ -79,7 +78,7 @@ namespace Projeto_Inter
                     txtDescricao.Text = produto.descricao;
                     txtID.Text = produto.id.ToString();
                     txtMarca.Text = produto.marcaitem;
-                    txtUnMedida.Text = produto.unidademedida;
+                    //txtUnMedida.Text = produto.unidademedida;
                     txtDataCadastro.Text = produto.datacadastro.ToString();
                 }
             }

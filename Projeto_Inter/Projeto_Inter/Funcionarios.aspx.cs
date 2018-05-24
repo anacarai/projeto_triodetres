@@ -32,7 +32,7 @@ namespace Projeto_Inter
             txtBairro.Text = string.Empty;
             txtCidade.Text = string.Empty;
             txtCargo.Text = string.Empty;
-            txtDepartamento.Text = string.Empty;
+            //txtDepartamento.Text = string.Empty;
             txtDataCadastro.Text = string.Empty;
         }
 
@@ -50,7 +50,7 @@ namespace Projeto_Inter
             funcionario.bairro = txtBairro.Text;
             funcionario.cidade = txtCidade.Text;
             funcionario.cargo = txtCargo.Text;
-            funcionario.departamento = txtDepartamento.Text;
+            //funcionario.departamento = txtDepartamento.Text;
             funcionario.datacadastro = Convert.ToDateTime(txtDataCadastro.Text.ToString());
 
             entity.cadastro_funcionario.Add(funcionario);
@@ -104,7 +104,7 @@ namespace Projeto_Inter
                 txtBairro.Text = funcionario.bairro;
                 txtCidade.Text = funcionario.cidade;
                 txtCargo.Text = funcionario.cargo;
-                txtDepartamento.Text = funcionario.departamento;
+                //txtDepartamento.Text = funcionario.departamento;
                 txtDataCadastro.Text = funcionario.datacadastro.ToString();
             }
         }

@@ -13,7 +13,7 @@ namespace Projeto_Inter
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            CarregarTabela();
+           // CarregarTabela();
         }
 
         public void CarregarTabela()
@@ -32,7 +32,9 @@ namespace Projeto_Inter
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            var lista = entity.cadastro_produto.Where(x => x.descricao.StartsWith(txtPesquisar.Text)).OrderBy(x => x.descricao).ToList();
+            gridMateriais.DataSource = lista;
+            gridMateriais.DataBind();
         }
     }
 }
