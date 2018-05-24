@@ -57,6 +57,7 @@
     <EntitySetMapping Name="compra">
       <EntityTypeMapping TypeName="bancodadosModel.compra">
         <MappingFragment StoreEntitySet="compra">
+          <ScalarProperty Name="idrequisicao" ColumnName="idrequisicao" />
           <ScalarProperty Name="pagamento" ColumnName="pagamento" />
           <ScalarProperty Name="prazo" ColumnName="prazo" />
           <ScalarProperty Name="funcionarioaprov" ColumnName="funcionarioaprov" />
@@ -71,6 +72,7 @@
     <EntitySetMapping Name="cotacao">
       <EntityTypeMapping TypeName="bancodadosModel.cotacao">
         <MappingFragment StoreEntitySet="cotacao">
+          <ScalarProperty Name="idfuncionario" ColumnName="idfuncionario" />
           <ScalarProperty Name="funcionarioaprov" ColumnName="funcionarioaprov" />
           <ScalarProperty Name="valor" ColumnName="valor" />
           <ScalarProperty Name="departamento" ColumnName="departamento" />
@@ -85,6 +87,7 @@
     <EntitySetMapping Name="requisicao">
       <EntityTypeMapping TypeName="bancodadosModel.requisicao">
         <MappingFragment StoreEntitySet="requisicao">
+          <ScalarProperty Name="idfuncionario" ColumnName="idfuncionario" />
           <ScalarProperty Name="funcionariorequisit" ColumnName="funcionariorequisit" />
           <ScalarProperty Name="comentario" ColumnName="comentario" />
           <ScalarProperty Name="quantidade" ColumnName="quantidade" />

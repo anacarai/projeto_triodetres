@@ -202,27 +202,12 @@
     <Compile Include="CadastroProduto.aspx.designer.cs">
       <DependentUpon>CadastroProduto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cadastro_fornecedor.cs">
-      <DependentUpon>EntityPrefeitura.tt</DependentUpon>
-    </Compile>
-    <Compile Include="cadastro_funcionario.cs">
-      <DependentUpon>EntityPrefeitura.tt</DependentUpon>
-    </Compile>
-    <Compile Include="cadastro_produto.cs">
-      <DependentUpon>EntityPrefeitura.tt</DependentUpon>
-    </Compile>
-    <Compile Include="compra.cs">
-      <DependentUpon>EntityPrefeitura.tt</DependentUpon>
-    </Compile>
     <Compile Include="Compras.aspx.cs">
       <DependentUpon>Compras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Compras.aspx.designer.cs">
       <DependentUpon>Compras.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="cotacao.cs">
-      <DependentUpon>EntityPrefeitura.tt</DependentUpon>
     </Compile>
     <Compile Include="Cotação.aspx.cs">
       <DependentUpon>Cotação.aspx</DependentUpon>
@@ -295,12 +280,6 @@
     </Compile>
     <Compile Include="Requisicao.aspx.designer.cs">
       <DependentUpon>Requisicao.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="requisicao.cs">
-      <DependentUpon>EntityPrefeitura.tt</DependentUpon>
-    </Compile>
-    <Compile Include="usuarios.cs">
-      <DependentUpon>EntityPrefeitura.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
