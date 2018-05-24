@@ -31,6 +31,15 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.TextBox txtNumero;
         
         /// <summary>
+        /// btnBuscarCot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBuscarCot;
+        
+        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace Projeto_Inter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDataReq;
+        
+        /// <summary>
+        /// gridRequisicoes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridRequisicoes;
         
         /// <summary>
         /// Label6 control.

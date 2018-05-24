@@ -31,7 +31,7 @@ namespace Projeto_Inter
             txtComplemento.Text = string.Empty;
             txtBairro.Text = string.Empty;
             txtCidade.Text = string.Empty;
-            txtDepartamento.Text = string.Empty;
+            //txtDepartamento.Text = string.Empty;
             txtDataCadastro.Text = string.Empty;
         }
 
@@ -48,7 +48,7 @@ namespace Projeto_Inter
             fornecedor.complemento = txtComplemento.Text;
             fornecedor.bairro = txtBairro.Text;
             fornecedor.cidade = txtCidade.Text;
-            fornecedor.departamento = txtDepartamento.Text;
+            //fornecedor.departamento = txtDepartamento.Text;
             fornecedor.datacadastro = Convert.ToDateTime(txtDataCadastro.Text.ToString());
 
             entity.cadastro_fornecedor.Add(fornecedor);
@@ -101,7 +101,7 @@ namespace Projeto_Inter
                 txtComplemento.Text = fornecedor.complemento;
                 txtBairro.Text = fornecedor.bairro;
                 txtCidade.Text = fornecedor.cidade;
-                txtDepartamento.Text = fornecedor.departamento;
+                //txtDepartamento.Text = fornecedor.departamento;
                 txtDataCadastro.Text = fornecedor.datacadastro.ToString();
             }
         }

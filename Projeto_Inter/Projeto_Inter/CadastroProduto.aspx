@@ -31,17 +31,17 @@
         <div class="col-2">
     <asp:Label ID="Label6" runat="server" Text="Unidade de Medida"></asp:Label>
     <asp:RequiredFieldValidator ID="ValidatorUnidadeMedida" runat="server" ControlToValidate="txtUnMedida" ErrorMessage="Campo &quot;Unidade de Medida&quot; não informado!" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
-    <asp:TextBox ID="txtUnMedida" runat="server" Width="176px" CssClass="form-control"></asp:TextBox>
+            <br />
+            <asp:DropDownList ID="ddlUnidadeMedida" runat="server">
+                <asp:ListItem>PEÇA</asp:ListItem>
+                <asp:ListItem>PACOTE</asp:ListItem>
+                <asp:ListItem>KG</asp:ListItem>
+            </asp:DropDownList>
     <br />
     </div></div>
 
     <br />
     <div class="row">
-    <div class="col-4">
-    <asp:Label ID="Label19" runat="server" Text="Departamento"></asp:Label>
-    <asp:RequiredFieldValidator ID="ValidatorDepartamento" runat="server" ControlToValidate="txtDepartamento" ErrorMessage="Campo &quot;Departamento&quot; não informado!" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
-    <asp:TextBox ID="txtDepartamento" runat="server" Width="400px" CssClass="form-control"></asp:TextBox>
-    </div>
     
     <div class="col-2">
     <asp:Label ID="Label20" runat="server" Text="Data Cadastro"></asp:Label>
@@ -62,7 +62,6 @@
             <asp:BoundField DataField="descricao" HeaderText="Descrição" />
             <asp:BoundField DataField="marcaitem" HeaderText="Marca" />
             <asp:BoundField DataField="unidademedida" HeaderText="UN" />
-            <asp:BoundField DataField="departamento" HeaderText="Departamento" />
             <asp:ButtonField HeaderText="Alterar" Text="Alterar" />
             <asp:ButtonField HeaderText="Remover" Text="Remover" />
         </Columns>

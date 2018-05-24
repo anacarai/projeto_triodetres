@@ -112,40 +112,13 @@ namespace Projeto_Inter {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorUnidadeMedida;
         
         /// <summary>
-        /// txtUnMedida control.
+        /// ddlUnidadeMedida control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUnMedida;
-        
-        /// <summary>
-        /// Label19 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
-        
-        /// <summary>
-        /// ValidatorDepartamento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidatorDepartamento;
-        
-        /// <summary>
-        /// txtDepartamento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartamento;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUnidadeMedida;
         
         /// <summary>
         /// Label20 control.

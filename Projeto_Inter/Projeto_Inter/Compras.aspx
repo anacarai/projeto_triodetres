@@ -6,6 +6,9 @@
     <asp:Label ID="NumCotacao" runat="server" Text="Nº Cotação"></asp:Label>
     <asp:RequiredFieldValidator ID="ValidatorCotacao" runat="server" ControlToValidate="txtNumero" ErrorMessage="O campo &quot;Nº cotação&quot; não foi informado " ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
     <asp:TextBox ID="txtNumero" runat="server" CssClass="form-control" placeholder="Entre com o número da cotação:" Width="176px"></asp:TextBox>
+
+    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-secondary" OnClick="btnSalvar_Click" ValidationGroup="validacao" />
+    <br />
     <asp:Label ID="Label4" runat="server" Text="Data da Cotação"></asp:Label>
     <asp:RequiredFieldValidator ID="ValidatorDataCotacao" runat="server" ControlToValidate="txtDataCot" ErrorMessage="O campo &quot;Data da cotação&quot; não foi informado" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
     <asp:TextBox ID="txtDataCot" runat="server" CssClass="form-control" placeholder="Entre com a data cotação:"></asp:TextBox>

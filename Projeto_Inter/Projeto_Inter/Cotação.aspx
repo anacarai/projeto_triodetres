@@ -6,12 +6,33 @@
         <div class="row">
             <div class="col-2">
     <asp:Label ID="Label3" runat="server" Text="Nº Requisição"></asp:Label>
-    <asp:TextBox ID="txtNumero" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtNumero" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:Button ID="btnBuscarCot" runat="server" OnClick="Button2_Click" Text="Buscar Cotação" CssClass="btn btn-secondary" />
              </div>
     <div class="col-2">
     <asp:Label ID="Label4" runat="server" Text="Data da Requisição"></asp:Label>
     <asp:TextBox ID="txtDataReq" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
         </div></div>
+        <div class="row">
+            <div class="col-6">
+    <asp:GridView ID="gridRequisicoes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" GridLines="Vertical" Width="693px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px">
+        <AlternatingRowStyle BackColor="White" />
+        <Columns>
+            <asp:BoundField DataField="idrequisicao" HeaderText="Nº Requisição" />
+            <asp:BoundField DataField="datarequisicao" HeaderText="Data" />
+        </Columns>
+        <FooterStyle BackColor="#CCCC99" />
+        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+        <RowStyle BackColor="#F7F7DE" />
+        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+        <SortedAscendingHeaderStyle BackColor="#848384" />
+        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+        <SortedDescendingHeaderStyle BackColor="#575357" />
+    </asp:GridView> 
+
+            </div></div>
         <br />
                 
         <div class="row">
