@@ -34,6 +34,8 @@ namespace Projeto_Inter
             //produto.unidademedida = txtUnMedida.Text;
             produto.datacadastro = Convert.ToDateTime(txtDataCadastro.Text);
 
+
+
             entity.cadastro_produto.Add(produto);
 
             entity.SaveChanges();

@@ -10,7 +10,7 @@ namespace Projeto_Inter
     public partial class PesquisaProduto : System.Web.UI.Page
     {
         private bancodadosEntities entity = new bancodadosEntities();
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
            // CarregarTabela();

@@ -90,7 +90,8 @@
     </div>
 
     <div class="col-2">
-    <asp:Label ID="Label17" runat="server" Text="Email"></asp:Label>
+    <asp:Label ID="Label17" runat="server" Text="E-mail"></asp:Label>
+        <asp:RequiredFieldValidator ID="ValidatorEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="O campo &quot;E-mail&quot; não foi informado." ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
     <asp:TextBox ID="txtEmail" runat="server" Width="400px" CssClass="form-control" placeholder="email@email.com.br"></asp:TextBox>
         </div></div>
     </fieldset>
