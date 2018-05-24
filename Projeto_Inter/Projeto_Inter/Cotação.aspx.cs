@@ -27,17 +27,9 @@ namespace Projeto_Inter
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            cotacao.idcotacao = Convert.ToInt32(txtNumero.Text);
-            cotacao.datacotacao = Convert.ToDateTime(txtDataReq.Text);
-            cotacao.funcioanriosolicit = txtFuncSolicit.Text;
-            cotacao.departamento = txtDepartamento.Text;
-
-            entity.cotacao.Add(cotacao);
-
-
-            entity.SaveChanges();
-
-            LimparCampos();
+            var lista = entity.requisicao.Where(x => x.idreq.ToString().StartsWith(txtNumero.Text)).OrderBy(x => x.idreq).ToList();
+            gridRequisicoes.DataSource = lista;
+            gridRequisicoes.DataBind();
         }
     }
 }
