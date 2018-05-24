@@ -35,6 +35,8 @@ namespace Projeto_Inter
             produto.departamento = txtDepartamento.Text;
             produto.datacadastro = Convert.ToDateTime(txtDataCadastro.Text);
 
+
+
             entity.cadastro_produto.Add(produto);
 
             entity.SaveChanges();
