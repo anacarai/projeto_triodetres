@@ -110,7 +110,7 @@
     <asp:Label ID="Label19" runat="server" Text="Departamento"></asp:Label>
         <asp:RequiredFieldValidator ID="ValidatorDepartamento" runat="server" ControlToValidate="txtDepartamento" ErrorMessage="Campo &quot;Departamento&quot; não informado" ForeColor="Red" ValidationGroup="validacao">*</asp:RequiredFieldValidator>
         <br />
-        <asp:DropDownList ID="ddlDepartamento" runat="server">
+        <asp:DropDownList ID="ddlDepartamento" runat="server" ValidationGroup="validacao">
             <asp:ListItem>Saúde</asp:ListItem>
             <asp:ListItem>Educação</asp:ListItem>
             <asp:ListItem>Segurança</asp:ListItem>
